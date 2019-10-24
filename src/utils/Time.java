@@ -6,7 +6,7 @@ public class Time {
 
     }
 
-    public void rest(int milliseconds) {
+    public static void rest(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
