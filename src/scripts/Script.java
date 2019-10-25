@@ -17,6 +17,7 @@ public class Script {
 
         player.generateInventPoints(gui);
 
+
     }
 
     public static Character getPlayer() {

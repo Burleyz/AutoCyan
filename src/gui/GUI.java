@@ -118,6 +118,9 @@ public class GUI extends JFrame {
         return inventInnerRect;
     }
 
+    public Point getInventInnerTopLeft() {
+        return inventInnerTopLeft;
+    }
 }
 
 
