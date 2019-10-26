@@ -10,4 +10,8 @@ public class Output {
         System.out.print(integer);
     }
 
+    public static void print(boolean bool) {
+        System.out.print(bool);
+    }
+
 }

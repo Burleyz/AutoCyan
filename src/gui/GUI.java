@@ -8,36 +8,43 @@ import java.awt.*;
 public class GUI extends JFrame {
 
     private Window w;
-    private Point topLeft;
-    private Point bottomRight;
-    private Point inventTopLeft;
-    private Point inventBottomRight;
-    private Point inventInnerBottomRight;
-    private Point inventInnerTopLeft;
-    private Rectangle screenRect;
-    private Rectangle inventOuterRect;
-    private Rectangle inventInnerRect;
+    private Point clientWindowTopLeft;
+    private Point clientWindowBottomRight;
+    private Rectangle clientWindow;
+
+    private Point playScreenTopLeft;
+    private Point playScreenBottomRight;
+    private Rectangle playScreen;
+
+    private Point inventOuterTopLeft; //although not just the invent, this is what i have named it (see guide image)
+    private Point inventOuterBottomRight;
+    private Rectangle inventOuter;
+    
+    private Point inventoryBottomRight;
+    private Point inventoryTopLeft;
+    private Rectangle inventory;
+
     private final double VERSION = 0.1;
-    private Rectangle tile;
 
 
     public GUI() {
 
-        //topLeft = new Point(502,256);
-        //bottomRight = new Point(1395,758);
-
-        setScreenBounds();
+        setClientBounds();
         setInventOuterBounds();
-        setInventInnerBounds();
+        setInventoryBounds();
+        setPlayScreenBounds();
 
-        screenRect = new Rectangle();
-        screenRect.setFrameFromDiagonal(topLeft, bottomRight);
+        clientWindow = new Rectangle();
+        clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
-        inventOuterRect = new Rectangle();
-        inventOuterRect.setFrameFromDiagonal(inventTopLeft, inventBottomRight);
+        inventOuter = new Rectangle();
+        inventOuter.setFrameFromDiagonal(inventOuterTopLeft, inventOuterBottomRight);
 
-        inventInnerRect = new Rectangle();
-        inventInnerRect.setFrameFromDiagonal(inventInnerTopLeft,inventInnerBottomRight);
+        inventory = new Rectangle();
+        inventory.setFrameFromDiagonal(inventoryTopLeft, inventoryBottomRight);
+
+        playScreen = new Rectangle();
+        playScreen.setFrameFromDiagonal(playScreenTopLeft, playScreenBottomRight);
 
         w = new Window(null)
 
@@ -49,12 +56,13 @@ public class GUI extends JFrame {
                 g.setFont(font);
                 g.setColor(Color.RED);
 
-                g.drawRect(screenRect.x, screenRect.y, screenRect.width, screenRect.height);
-                g.drawRect(inventOuterRect.x, inventOuterRect.y, inventOuterRect.width, inventOuterRect.height);
-                g.drawRect(inventInnerRect.x, inventInnerRect.y, inventInnerRect.width, inventInnerRect.height);
+                g.drawRect(clientWindow.x, clientWindow.y, clientWindow.width, clientWindow.height);
+                g.drawRect(inventOuter.x, inventOuter.y, inventOuter.width, inventOuter.height);
+                g.drawRect(inventory.x, inventory.y, inventory.width, inventory.height);
+                g.drawRect(playScreen.x, playScreen.y, playScreen.width, playScreen.height);
 
                 final String message = "AutoCyan - Version: " + VERSION;
-                g.drawString(message, (int) screenRect.getX() + 5, (int) screenRect.getY() + 40);
+                g.drawString(message, (int) clientWindow.getX() + 5, (int) clientWindow.getY() + 40);
 
             }
 
@@ -79,47 +87,60 @@ public class GUI extends JFrame {
         return p;
     }
 
-    public void setScreenBounds() {
-        System.out.println("Getting mouse position in 2 seconds! (TopLeft)");
+    public void setClientBounds() {
+        System.out.println("Getting mouse position in 2 seconds! (Client Top Left)");
         Time.rest(2000);
-        topLeft = getMousePos();
-        System.out.println("Getting mouse position in 2 seconds! (BottomRight)");
+        clientWindowTopLeft = getMousePos();
+        System.out.println("Getting mouse position in 2 seconds! (Client Bottom Right)");
         Time.rest(2000);
-        bottomRight = getMousePos();
+        clientWindowBottomRight = getMousePos();
     }
 
     public void setInventOuterBounds() {
         System.out.println("Getting mouse position in 2 seconds! (Invent Outer Top Left)");
         Time.rest(2000);
-        inventTopLeft = getMousePos();
+        inventOuterTopLeft = getMousePos();
         System.out.println("Getting mouse position in 2 seconds! (Invent Outer Bottom Right)");
         Time.rest(2000);
-        inventBottomRight = getMousePos();
+        inventOuterBottomRight = getMousePos();
     }
 
-    public void setInventInnerBounds() {
-        System.out.println("Getting mouse position in 2 seconds! (Invent Inner Top Left)");
+    public void setInventoryBounds() {
+        System.out.println("Getting mouse position in 2 seconds! (Invent Top Left)");
         Time.rest(2000);
-        inventInnerTopLeft = getMousePos();
-        System.out.println("Getting mouse position in 2 seconds! (Invent Inner Bottom Right)");
+        inventoryTopLeft = getMousePos();
+        System.out.println("Getting mouse position in 2 seconds! (Invent Bottom Right)");
         Time.rest(2000);
-        inventInnerBottomRight = getMousePos();
+        inventoryBottomRight = getMousePos();
     }
 
-    public Point getInventTopLeft() {
-        return inventTopLeft;
+    public void setPlayScreenBounds() {
+        System.out.println("Getting mouse position in 2 seconds! (Play Screen Top Left)");
+        Time.rest(2000);
+        playScreenTopLeft = getMousePos();
+        System.out.println("Getting mouse position in 2 seconds! (Play Screen Bottom Right)");
+        Time.rest(2000);
+        playScreenBottomRight = getMousePos();
     }
 
-    public Point getInventBottomRight() {
-        return inventBottomRight;
+    public Point getInventOuterTopLeft() {
+        return inventOuterTopLeft;
     }
 
-    public Rectangle getInventInnerRect() {
-        return inventInnerRect;
+    public Point getInventOuterBottomRight() {
+        return inventOuterBottomRight;
     }
 
-    public Point getInventInnerTopLeft() {
-        return inventInnerTopLeft;
+    public Rectangle getInventory() {
+        return inventory;
+    }
+
+    public Point getInventoryTopLeft() {
+        return inventoryTopLeft;
+    }
+
+    public Rectangle getPlayScreen() {
+        return playScreen;
     }
 }
 

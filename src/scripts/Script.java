@@ -1,34 +1,38 @@
 package scripts;
 
-import gui.GUI;
 import character.Character;
+import colour.ColourManager;
+import gui.GUI;
+import main.Controller;
+import mouse.ClickHandler;
 import utils.Time;
 
 public class Script {
 
-    private static Character player;
-    private static GUI gui;
-    private static Time time;
+    private static Controller controller;
 
     public Script() {
-        gui = new GUI();
-        player = new Character();
-        time = new Time();
-
-        player.generateInventPoints(gui);
-
-
+        controller = new Controller();
     }
 
     public static Character getPlayer() {
-        return player;
-    }
-
-    public static GUI getGui() {
-        return gui;
+        return controller.getPlayer();
     }
 
     public static Time getTime() {
-        return time;
+        return controller.getTime();
     }
+
+    public static ClickHandler getClickHandler() {
+        return controller.getClickHandler();
+    }
+
+    public static ColourManager getColourManager() {
+        return controller.getColourManager();
+    }
+
+    public static GUI getGui() {
+        return controller.getGui();
+    }
+
 }
