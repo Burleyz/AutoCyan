@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AutoCyan:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AutoCyan_jar</output-path>
+    <root id="archive" name="AutoCyan.jar">
+      <element id="module-output" name="AutoCyan" />
+    </root>
+  </artifact>
+</component>

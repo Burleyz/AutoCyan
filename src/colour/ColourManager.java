@@ -1,7 +1,6 @@
 package colour;
 
 import gui.GUI;
-import npc.Npc;
 import utils.Output;
 
 import java.awt.*;
@@ -49,12 +48,6 @@ public class ColourManager {
         return pointsFound;
     }
 
-    public ArrayList<Npc> findNpc(Npc npc, int x1, int y1, int x2, int y2) {
-        Color[] colors = npc.getColors();
-
-        return null;
-
-    }
 
     public Color getColour(int x, int y) { //gets colour at x and y coords
         return bot.getPixelColor(x,y);

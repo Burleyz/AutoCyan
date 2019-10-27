@@ -3,6 +3,7 @@ package mouse;
 import antiban.AntiBan;
 import character.Character;
 import character.Inventory;
+import npc.Npc;
 import utils.Output;
 
 import java.awt.*;
@@ -37,14 +38,26 @@ public class ClickHandler {
         }
     }
 
-    private void clickPoint(int x, int y) throws AWTException{
+    public void clickPoint(int x, int y) throws AWTException{
         bot.mouseMove(x, y);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+    }
+
+    public void clickPoint(Point p) throws AWTException{
+        bot.mouseMove(p.x, p.y);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
     public void rightClickPoint(int x, int y) throws AWTException {
         bot.mouseMove(x, y);
+        bot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+    }
+
+    public void rightClickPoint(Point p) throws AWTException {
+        bot.mouseMove(p.x, p.y);
         bot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
     }
@@ -60,5 +73,6 @@ public class ClickHandler {
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
+
 
 }
