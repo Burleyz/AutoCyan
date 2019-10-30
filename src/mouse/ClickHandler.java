@@ -19,7 +19,7 @@ public class ClickHandler {
         }
     }
 
-    private Point getCenter(Rectangle rect) { //calcs center of rectangle THIS OR DROP ISNT WORKING, FIX THIS
+    public Point getCenter(Rectangle rect) { //calcs center of rectangle THIS OR DROP ISNT WORKING, FIX THIS
         return new Point((rect.x + (rect.width/2)),rect.y + (rect.height/2));
     }
 
@@ -47,6 +47,14 @@ public class ClickHandler {
         bot.mouseMove(x + rectangle.x, y + rectangle.y);
         bot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+    }
+
+    public void rightClickPointMobile(int x, int y) throws AWTException {
+        Output.print("Right clicking!");
+        bot.mouseMove(x, y);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.delay(1000);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
     public void clickPoint(int x, int y, Rectangle rectangle) throws AWTException{ //used to make sure it clicks inside playscreen not full screen

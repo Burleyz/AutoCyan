@@ -1,10 +1,15 @@
 package gui;
 
 import data.Data;
+import javafx.scene.shape.Line;
+import utils.Output;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Gui extends JFrame {
 
@@ -29,7 +34,7 @@ public class Gui extends JFrame {
         clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
         loginScreenCheckRectangle = new Rectangle();
-        loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 100)); //makes rectangle to check between 3 login screens
+        loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
 
              w = new Window(null)
 
@@ -48,6 +53,19 @@ public class Gui extends JFrame {
                 //g.setColor(Color.BLUE);
                 //g.drawRect(loginScreenCheckRectangle.x, loginScreenCheckRectangle.y, loginScreenCheckRectangle.width, loginScreenCheckRectangle.height); //don't draw this when released
 
+                /* BELOW CODE USED FOR GENERATING COMPARISON IMAGES
+                BufferedImage capture = null;
+                try {
+                    capture = new Robot().createScreenCapture(loginScreenCheckRectangle);
+                } catch (AWTException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    ImageIO.write(capture, "png", new File("invalid_credentials.png"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                */
 
             }
 
@@ -97,6 +115,10 @@ public class Gui extends JFrame {
     public Rectangle getClientWindow() {
         return clientWindow;
     }
+
+    //public Rectangle generateInventoryRectangle() {
+    //    clientWindow.
+    //}
 }
 
 

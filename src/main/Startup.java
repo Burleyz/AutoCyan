@@ -2,7 +2,7 @@ package main;
 
 import data.Data;
 import data.KeyboardKeys;
-import data.LoginHandler;
+import data.LoginPropertiesLoader;
 import gui.Gui;
 import mouse.ClickHandler;
 import utils.GetWindowRect;
@@ -26,17 +26,16 @@ public class Startup {
     private static int clientRectangleTopY;
     private static int clientRectangleBottomX;
     private static int clientRectangleBottomY;
-    private static LoginHandler loginHandler;
+    private static LoginPropertiesLoader loginPropertiesLoader;
     private static ClickHandler clickHandler;
-    private boolean clientOpen;
 
+    /*
+    Please note! When starting client, please select a free world manually if using a f2p account!
 
-    public Startup() {
-
-    }
+     */
 
     private static void initClasses() {
-        loginHandler = new LoginHandler();
+        loginPropertiesLoader = new LoginPropertiesLoader();
         clickHandler = new ClickHandler();
     }
 
@@ -51,14 +50,16 @@ public class Startup {
 
         Time.rest(5000);
         try {
-            login(loginHandler.getClientType());
+            login(loginPropertiesLoader.getClientType());
         } catch (AWTException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
         Time.rest(5000);
+
         //scriptSelector();
+
 
     }
 
@@ -67,7 +68,7 @@ public class Startup {
 
 
         try {
-            rect = GetWindowRect.getRect(loginHandler.getClientName());
+            rect = GetWindowRect.getRect(loginPropertiesLoader.getClientName());
 
             clientRectangleTopX = rect[0];
             clientRectangleTopY = rect[1];
@@ -76,7 +77,7 @@ public class Startup {
 
 
             System.out.printf("The corner locations for the window \"%s\" are %s",
-                    loginHandler.getClientName(), Arrays.toString(rect));
+                    loginPropertiesLoader.getClientName(), Arrays.toString(rect));
 
             Output.print("\n");
 
@@ -122,8 +123,9 @@ public class Startup {
 
     private static void login(String clientType) throws AWTException, IOException {
 
+        Output.print("Attempting to login...");
         if (clientType.equals("desktop")) {
-            Output.print("Attempting to login...");
+
             KeyboardKeys kk = new KeyboardKeys();
 
             Robot robot = null;
@@ -132,8 +134,8 @@ public class Startup {
             } catch (AWTException e) {
                 e.printStackTrace();
             }
-            String username = loginHandler.getUsername();
-            String password = loginHandler.getPassword();
+            String username = loginPropertiesLoader.getUsername();
+            String password = loginPropertiesLoader.getPassword();
 
             boolean tf = true;
             while(tf) {
@@ -143,6 +145,8 @@ public class Startup {
                     robot.delay(2000); //waits 2 seconds
 
                 } else if (checkLoginScreen(2)) { //checking which login screen, if on correct screen (screen 2) then do type chars
+
+                    Output.print("Typing username and password...");
                     for (char c : username.toCharArray()) {
                         kk.keyPress(c);
                         robot.delay(100);
@@ -163,16 +167,36 @@ public class Startup {
 
                 } else if (checkLoginScreen(3)) {
                     clickHandler.clickPoint(393, 380, gui.getClientWindow());
+
+                } else if (checkLoginScreen(4)) {
+                    Output.print("Credentials are incorrect in autocyan.properties!");
+                    System.exit(-1);
+
+
                 } else {
                     Output.print("Account is logged in.");
+                    Output.print("Login completed!\n");
                     tf = false;
                 }
             }
 
 
 
-            Output.print("Login completed!" + "\n");
 
+
+
+        } else if (clientType.equals("mobile")) {
+
+            Output.print("Mobile client - Please run script when already logged in!");
+            /*
+            NOT WORKING, CLICK WONT REGISTER - Login manually
+
+            Point p = clickHandler.getCenter(gui.getClientWindow());
+            clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
+            Time.rest(2000);
+            clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
+            Output.print("Login completed!\n");
+            */
 
         }
     }
@@ -187,10 +211,12 @@ public class Startup {
         BufferedImage loginScreen1;
         BufferedImage loginScreen2;
         BufferedImage loginScreen3;
+        BufferedImage invalidCredentials;
 
             loginScreen1 = ImageIO.read(new File("./login_screen_1.png"));
             loginScreen2 = ImageIO.read(new File("./login_screen_2.png"));
             loginScreen3 = ImageIO.read(new File("./login_screen_3.png"));
+            invalidCredentials = ImageIO.read((new File("./invalid_credentials.png")));
 
         switch(screen) {
             case 1:
@@ -202,13 +228,16 @@ public class Startup {
             case 3:
                 return compareImages(loginCapture, loginScreen3);
 
+            case 4:
+                return compareImages(loginCapture, invalidCredentials);
+
             default:
                 return false;
         }
 
     }
 
-    public static boolean compareImages(BufferedImage imgA, BufferedImage imgB) {
+    private static boolean compareImages(BufferedImage imgA, BufferedImage imgB) {
         // The images must be the same size.
         if (imgA.getWidth() != imgB.getWidth() || imgA.getHeight() != imgB.getHeight()) {
             //Output.print("Image widths/Heights are different!");
@@ -231,6 +260,10 @@ public class Startup {
         }
 
         return true;
+    }
+
+    private static void rightClickTest() throws AWTException {
+        clickHandler.rightClickPointMobile(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
     }
 
 

@@ -7,46 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jna_5_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jna_platform_5_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autocyan.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/jna-5.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/jna-platform-5.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/colour/RSObjectColours.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/KeyboardKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/LoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/GUI_old.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/RSObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/CyanMobileMiner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/GetWindowRect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoCyan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AutoCyan.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/LoginHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/NPCColours.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/colour/NPCColours.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/ObjectColours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_screen_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/login_screen_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_screen_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/login_screen_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_screen_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/login_screen_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/data/LoginHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/mouse/ClickHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/mouse/ClickHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/CyanKBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/scripts/CyanKBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/Script.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/scripts/Script.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/antiban/SPKRandomHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/LoginHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colour/ColourManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colour/ColourManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colour/NPCColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colour/NPCColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colour/ObjectColours.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mouse/ClickHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouse/ClickHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/CyanKBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/CyanKBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Script.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1312">
+              <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2952">
-              <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+            <state relative-caret-position="-579">
+              <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,6 +56,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,6 +85,7 @@
     <findStrings>
       <find>keypre</find>
       <find>Data</find>
+      <find>rightClic</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/Test.java" />
         <option value="$PROJECT_DIR$/src/scripts/Test.java" />
         <option value="$PROJECT_DIR$/src/utils/Time.java" />
         <option value="$PROJECT_DIR$/src/antiban/AntiBan.java" />
@@ -134,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/scripts/CyanKBD.java" />
         <option value="$PROJECT_DIR$/src/colour/RSObjectColours.java" />
         <option value="$PROJECT_DIR$/src/scripts/CyanMobileMiner.java" />
-        <option value="$PROJECT_DIR$/src/mouse/ClickHandler.java" />
         <option value="$PROJECT_DIR$/src/character/Character.java" />
         <option value="$PROJECT_DIR$/src/main/Controller.java" />
         <option value="$PROJECT_DIR$/src/utils/GetWindowRect.java" />
@@ -144,10 +137,12 @@
         <option value="$PROJECT_DIR$/src/account.properties" />
         <option value="$PROJECT_DIR$/src/data/KeyboardKeys.java" />
         <option value="$PROJECT_DIR$/account.properties" />
-        <option value="$PROJECT_DIR$/src/data/LoginHandler.java" />
         <option value="$PROJECT_DIR$/src/data/DataHandler.java" />
         <option value="$PROJECT_DIR$/src/data/Data.java" />
+        <option value="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" />
+        <option value="$PROJECT_DIR$/src/data/LoginHandler.java" />
         <option value="$PROJECT_DIR$/src/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/mouse/ClickHandler.java" />
         <option value="$PROJECT_DIR$/src/main/Startup.java" />
         <option value="$PROJECT_DIR$/autocyan.properties" />
       </list>
@@ -156,7 +151,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-26" />
     <option name="y" value="33" />
-    <option name="width" value="1116" />
+    <option name="width" value="1073" />
     <option name="height" value="975" />
   </component>
   <component name="ProjectView">
@@ -181,12 +176,6 @@
               <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="colour" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -201,12 +190,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mouse" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -215,7 +198,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572469473448" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572475038924" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/jna-5.4.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -376,13 +359,20 @@
       <option name="project" value="LOCAL" />
       <updated>1572392813490</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated LoginHandler">
+      <created>1572469527723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572469527723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -391,7 +381,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31960997" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21235102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -448,24 +438,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated LoginHandler" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/MouseController.java" />
     <entry file="file://$PROJECT_DIR$/src/utils/Application1.java" />
     <entry file="file://$PROJECT_DIR$/src/utils/ClickMouse.java" />
     <entry file="file://$PROJECT_DIR$/src/character/InventoryManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/antiban/AntiBan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -527,36 +502,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/world/Walking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoCyanGuide.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Output.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#83#84#0" expanded="true" />
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,16 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/character/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -669,20 +608,6 @@
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/GetWindowRect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#989#1016#0" expanded="true" />
-            <element signature="e#1310#1337#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -762,33 +687,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/LoginHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="77" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login_screen_3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login_screen_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login_screen_1.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/check_login_images.png">
       <provider selected="true" editor-type-id="images" />
@@ -805,10 +709,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login_screen_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_screen_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_screen_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invalid_credentials.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/LoginHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoCyanGuide.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/LoginPropertiesLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="77" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/WhatsMyColor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1241">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="374">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2751#2752#0" expanded="true" />
@@ -819,15 +760,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/GetWindowRect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+        <state relative-caret-position="799">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#2540#2541#0" expanded="true" />
-            <element signature="e#2574#2575#0" expanded="true" />
-            <element signature="e#3033#3034#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Output.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#83#84#0" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -840,8 +828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2952">
-          <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+        <state relative-caret-position="-579">
+          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

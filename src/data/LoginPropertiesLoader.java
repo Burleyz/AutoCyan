@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class LoginHandler {
+public class LoginPropertiesLoader {
 
     private static Properties accountProperties;
 
-    public LoginHandler() {
+    public LoginPropertiesLoader() {
         setupProperties();
     }
 
