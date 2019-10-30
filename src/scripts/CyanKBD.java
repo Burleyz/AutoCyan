@@ -1,6 +1,5 @@
 package scripts;
 
-import antiban.SPKRandomHandler;
 import npc.Npc;
 import utils.Output;
 import utils.Time;
@@ -13,7 +12,10 @@ public class CyanKBD extends Script {
     private static Npc kbd;
     private static Point kbdLocation;
     private static boolean kbdAlive;
-    private static SPKRandomHandler randomHandler;
+
+    private static Npc guard;
+    private static Point guardLocation;
+    private static boolean guardExists;
 
     public CyanKBD() {
 
@@ -21,19 +23,24 @@ public class CyanKBD extends Script {
 
     public static void main(String[] args) throws AWTException {
         Script script = new Script(); //scripts must initiate this in all cases
-        randomHandler = new SPKRandomHandler(getClickHandler(),getColourManager()); //write code to dismiss the guard when it appears
-        initKbd();
+        initNpcs();
 
         while(true) {
+            getGuardLocation();
+            dismissGuard();
             getKbdLocation();
             attackKbd();
+
         }
 
     }
 
-    private static void initKbd() {
+    private static void initNpcs() {
         kbd = new Npc("KBD", getColourManager());
         Output.print("KBD Colours: " + kbd.getColors());
+
+        guard = new Npc("SPAWN_PK_AFK_GUARD", getColourManager());
+        Output.print("Guard Colours: " + guard.getColors());
     }
 
     private static void getKbdLocation() {
@@ -51,14 +58,34 @@ public class CyanKBD extends Script {
             kbdAlive = true;
         }
 
+    }
 
+    private static void getGuardLocation() {
+        ArrayList<Point> guardLocations = getColourManager().findColour(guard.getColors()[0]);
+
+        if(guardLocations.size() == 0) {
+            Output.print("GUARD NOT FOUND!");
+            guardExists = false;
+        } else {
+            Point p = guardLocations.get(0); //look for colour 1 from KBD
+            guardLocation = p;
+            Output.print("Guard Found at: " + guardLocation.toString());
+            guardExists = true;
+        }
+
+    }
+
+    public static void dismissGuard() throws AWTException {
+        if(guardExists) {
+                getClickHandler().clickPoint(guardLocation.x, guardLocation.y, getGui().getPlayScreen());
+        }
     }
 
     private static void attackKbd() throws AWTException {
 
         if(kbdAlive) {
             getClickHandler().clickPoint(kbdLocation.x, kbdLocation.y, getGui().getPlayScreen());
-            Time.rest(10000); //wait 15 seconds for us to kill nps, need to change this to check if its dead
+            Time.rest(10000); //wait 10 seconds for us to kill nps, need to change this to check if its dead
         }
     }
 

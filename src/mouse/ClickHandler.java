@@ -1,9 +1,7 @@
 package mouse;
 
 import antiban.AntiBan;
-import character.Character;
 import character.Inventory;
-import npc.Npc;
 import utils.Output;
 
 import java.awt.*;
@@ -44,23 +42,6 @@ public class ClickHandler {
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
-    public void clickPoint(Point p) throws AWTException{
-        bot.mouseMove(p.x, p.y);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-    }
-
-    public void rightClickPoint(int x, int y) throws AWTException {
-        bot.mouseMove(x, y);
-        bot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
-    }
-
-    public void rightClickPoint(Point p) throws AWTException {
-        bot.mouseMove(p.x, p.y);
-        bot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
-    }
 
     public void rightClickPoint(int x, int y, Rectangle rectangle) throws AWTException {
         bot.mouseMove(x + rectangle.x, y + rectangle.y);
@@ -68,7 +49,7 @@ public class ClickHandler {
         bot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
     }
 
-    public void clickPoint(int x, int y, Rectangle rectangle) throws AWTException{
+    public void clickPoint(int x, int y, Rectangle rectangle) throws AWTException{ //used to make sure it clicks inside playscreen not full screen
         bot.mouseMove(x + rectangle.x, y + rectangle.y);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);

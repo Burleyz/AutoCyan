@@ -1,20 +1,16 @@
 package character;
 
-import gui.GUI;
+import gui.GUI_old;
 
 public class Character {
 
     private Inventory inventory;
-    private String username;
-    private String password;
     private boolean loggedIn;
 
-    public Character(GUI gui, String username, String password) {
+    public Character(GUI_old guiOld) {
 
-        this.username = username;
-        this.password = password;
         inventory = new Inventory();
-        inventory.generateInventPoints(gui);
+        inventory.generateInventPoints(guiOld);
 
     }
 

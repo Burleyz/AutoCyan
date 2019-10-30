@@ -2,7 +2,7 @@ package scripts;
 
 import character.Character;
 import colour.ColourManager;
-import gui.GUI;
+import gui.GUI_old;
 import main.Controller;
 import mouse.ClickHandler;
 import utils.Time;
@@ -31,8 +31,8 @@ public class Script {
         return controller.getColourManager();
     }
 
-    public static GUI getGui() {
-        return controller.getGui();
+    public static GUI_old getGui() {
+        return controller.getGuiOld();
     }
 
 }

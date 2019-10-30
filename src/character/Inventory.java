@@ -1,6 +1,6 @@
 package character;
 
-import gui.GUI;
+import gui.GUI_old;
 import utils.Output;
 
 import java.awt.*;
@@ -21,10 +21,10 @@ public class Inventory {
         }
     }
 
-    public void generateInventPoints(GUI gui) { //disgusting code, need to make this more efficient
-        Point inventInnerTopLeft = new Point(gui.getInventoryTopLeft()); //gets starting position
+    public void generateInventPoints(GUI_old guiOld) { //disgusting code, need to make this more efficient
+        Point inventInnerTopLeft = new Point(guiOld.getInventoryTopLeft()); //gets starting position
 
-        Rectangle invent = gui.getInventory(); //get rect as invent outline
+        Rectangle invent = guiOld.getInventory(); //get rect as invent outline
 
         float width = (float)invent.width;
         float height = (float)invent.height;

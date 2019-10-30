@@ -1,7 +1,7 @@
 package main;
 
 import colour.ColourManager;
-import gui.GUI;
+import gui.GUI_old;
 import character.Character;
 import mouse.ClickHandler;
 import utils.Time;
@@ -14,22 +14,20 @@ import world.WorldMapHandler;
 public class Controller {
 
     private static Character player;
-    private static GUI gui;
+    private static GUI_old guiOld;
     private static Time time;
     private static ClickHandler clickHandler;
-    private final static String USERNAME = "";
-    private final static String PASSWORD = "";
     private static WorldMapHandler worldMapHandler;
     private static ColourManager colourManager;
 
     public Controller() {
 
-        gui = new GUI();
-        player = new Character(gui,USERNAME,PASSWORD);
+        guiOld = new GUI_old();
+        player = new Character(guiOld);
         time = new Time();
         clickHandler = new ClickHandler();
         worldMapHandler = new WorldMapHandler();
-        colourManager = new ColourManager(gui); //pass in gui as it has the Point info
+        colourManager = new ColourManager(guiOld); //pass in guiOld as it has the Point info
 
     }
 
@@ -49,7 +47,7 @@ public class Controller {
         return colourManager;
     }
 
-    public static GUI getGui() {
-        return gui;
+    public static GUI_old getGuiOld() {
+        return guiOld;
     }
 }

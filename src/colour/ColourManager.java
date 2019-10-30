@@ -1,6 +1,6 @@
 package colour;
 
-import gui.GUI;
+import gui.GUI_old;
 import utils.Output;
 
 import java.awt.*;
@@ -11,11 +11,13 @@ public class ColourManager {
     
     private Robot bot;
     private NPCColours npcColours;
-    private GUI gui;
+    private GUI_old guiOld;
+    private RSObjectColours objectColours;
 
-    public ColourManager(GUI gui) {
-        this.gui = gui;
+    public ColourManager(GUI_old guiOld) {
+        this.guiOld = guiOld;
         npcColours = new NPCColours();
+        objectColours = new RSObjectColours();
         try {
             bot = new Robot();
         } catch (AWTException e) {
@@ -25,7 +27,7 @@ public class ColourManager {
 
     public ArrayList<Point> findColour(Color color) { //find colour in coordinates and returns ArrayList of matches
 
-        Rectangle capture = gui.getPlayScreen();
+        Rectangle capture = guiOld.getPlayScreen();
         BufferedImage bufferedImage = bot.createScreenCapture(capture);
         ArrayList<Point> pointsFound = new ArrayList<>();
 
@@ -100,5 +102,9 @@ public class ColourManager {
 
     public NPCColours getNpcColours() {
         return npcColours;
+    }
+
+    public RSObjectColours getObjectColours() {
+        return objectColours;
     }
 }
