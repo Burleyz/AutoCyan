@@ -1,10 +1,12 @@
 package main;
 
+import colour.ColourManager;
 import data.Data;
 import data.KeyboardKeys;
 import data.LoginPropertiesLoader;
 import gui.Gui;
 import mouse.ClickHandler;
+import scripts.ACMining;
 import utils.GetWindowRect;
 import utils.Output;
 import utils.Time;
@@ -58,7 +60,7 @@ public class Startup {
         }
         Time.rest(5000);
 
-        //scriptSelector();
+        scriptSelector();
 
 
     }
@@ -100,6 +102,7 @@ public class Startup {
         Output.print("Which script would you like to run?");
         Output.print("1: ACMining (PowerMining)");
         int answer = scanner.nextInt();
+        Time.rest(1000);
         loadScript(answer);
 
 
@@ -109,13 +112,16 @@ public class Startup {
         switch (script) {
             case 1:
                 Output.print("Loading ACMining...");
+                ACMining cm = new ACMining(gui); //passes gui to have access to the playscreen data
                 break;
         }
     }
 
+
+
     private static void launchGui() {
         Output.print("Latching onto instance!");
-        gui = new Gui();
+        gui = new Gui(loginPropertiesLoader);
         gui.setClientWindowTopLeft(new Point(clientRectangleTopX, clientRectangleTopY));
         gui.setClientWindowBottomRight(new Point(clientRectangleBottomX, clientRectangleBottomY));
         gui.setupGui();
@@ -123,6 +129,7 @@ public class Startup {
 
     private static void login(String clientType) throws AWTException, IOException {
 
+        boolean tf = true;
         Output.print("Attempting to login...");
         if (clientType.equals("desktop")) {
 
@@ -137,7 +144,7 @@ public class Startup {
             String username = loginPropertiesLoader.getUsername();
             String password = loginPropertiesLoader.getPassword();
 
-            boolean tf = true;
+
             while(tf) {
 
                 if (checkLoginScreen(1)) {
@@ -176,13 +183,8 @@ public class Startup {
                 } else {
                     Output.print("Account is logged in.");
                     Output.print("Login completed!\n");
-                    tf = false;
                 }
             }
-
-
-
-
 
 
         } else if (clientType.equals("mobile")) {
@@ -266,5 +268,8 @@ public class Startup {
         clickHandler.rightClickPointMobile(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
     }
 
+    public static Gui getGui() {
+        return gui;
+    }
 
 }

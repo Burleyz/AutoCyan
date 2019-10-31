@@ -1,15 +1,11 @@
 package gui;
 
 import data.Data;
-import javafx.scene.shape.Line;
-import utils.Output;
+import data.LoginPropertiesLoader;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class Gui extends JFrame {
 
@@ -20,21 +16,26 @@ public class Gui extends JFrame {
 
     //following rectangles are for checking if past login screens
     private Rectangle loginScreenCheckRectangle; //this will check which stage of login we are at
+    private Rectangle playScreen;
+    private LoginPropertiesLoader loginPropertiesLoader;
+    private int clientHeaderSize;
 
 
-    public Gui() {
-
+    public Gui(LoginPropertiesLoader loginPropertiesLoader) {
+        this.loginPropertiesLoader = loginPropertiesLoader;
     }
 
     public void setupGui() {
 
-
+        setClientHeaderSize();
         //Sets up client window Rectangle
         clientWindow = new Rectangle();
         clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
         loginScreenCheckRectangle = new Rectangle();
         loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
+
+        generatePlayScreen();
 
              w = new Window(null)
 
@@ -49,6 +50,7 @@ public class Gui extends JFrame {
                 final String message = "AutoCyan - Version: " + Data.getVERSION();
                 g.drawString(message, (int) clientWindow.getX() + 5, (int) clientWindow.getY() + 40);
                 g.drawRect(clientWindow.x, clientWindow.y, clientWindow.width, clientWindow.height);
+                g.drawRect(playScreen.x,playScreen.y,playScreen.width,playScreen.height);
 
                 //g.setColor(Color.BLUE);
                 //g.drawRect(loginScreenCheckRectangle.x, loginScreenCheckRectangle.y, loginScreenCheckRectangle.width, loginScreenCheckRectangle.height); //don't draw this when released
@@ -80,6 +82,10 @@ public class Gui extends JFrame {
         w.setBounds(w.getGraphicsConfiguration().getBounds());
         w.setBackground(new Color(0, true));
         w.setVisible(true);
+    }
+
+    private void generatePlayScreen() {
+        playScreen = new Rectangle(clientWindow.x,clientWindow.y + clientHeaderSize,clientWindow.width,clientWindow.height - clientHeaderSize); //add 40 to move below top bar of bluestacks
     }
 
     public Point getMousePos() {
@@ -119,6 +125,19 @@ public class Gui extends JFrame {
     //public Rectangle generateInventoryRectangle() {
     //    clientWindow.
     //}
+
+
+    public Rectangle getPlayScreen() {
+        return playScreen;
+    }
+
+    private void setClientHeaderSize() {
+        if(loginPropertiesLoader.getClientName().equals("OSBuddy Guest - Guest")) {
+            clientHeaderSize = 32;
+        } else if(loginPropertiesLoader.getClientName().equals("BlueStacks")) {
+            clientHeaderSize = 40;
+        }
+    }
 }
 
 
