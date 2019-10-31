@@ -7,25 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AutoCyan_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AutoCyan_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocyan.properties" beforeDir="false" afterPath="$PROJECT_DIR$/autocyan.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/CyanKBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/CyanMobileMiner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/Script.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colour/ColourManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colour/ColourManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/CyanKBD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/CyanMobileMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACMining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Script.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+            <state relative-caret-position="405">
+              <caret line="138" column="17" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8348#8349#0" expanded="true" />
@@ -62,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autocyan.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -232,9 +217,9 @@
         <option value="$PROJECT_DIR$/src/scripts/Script.java" />
         <option value="$PROJECT_DIR$/src/character/Character.java" />
         <option value="$PROJECT_DIR$/src/scripts/ACMining.java" />
-        <option value="$PROJECT_DIR$/src/main/Startup.java" />
         <option value="$PROJECT_DIR$/src/gui/Gui.java" />
         <option value="$PROJECT_DIR$/autocyan.properties" />
+        <option value="$PROJECT_DIR$/src/main/Startup.java" />
       </list>
     </option>
   </component>
@@ -284,6 +269,12 @@
               <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -300,9 +291,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572507150652" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572508428208" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/jna-5.4.0.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -475,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572475085061</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated LoginHandler - Client selection adjusted&#10;&#10;Started ACMiner development">
+      <created>1572507220059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572507220059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -490,7 +488,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42686892" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42686892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,7 +496,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -545,7 +543,8 @@
     <MESSAGE value="Created KBD Script for SpawnPk, other various clicking updates" />
     <MESSAGE value="Updated LoginHandler" />
     <MESSAGE value="Updated LoginHandler - Fully working! Added mobile support for Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated LoginHandler - Fully working! Added mobile support for Login" />
+    <MESSAGE value="Updated LoginHandler - Client selection adjusted&#10;&#10;Started ACMiner development" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated LoginHandler - Client selection adjusted&#10;&#10;Started ACMiner development" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/utils/Application1.java" />
@@ -900,18 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8348#8349#0" expanded="true" />
-            <element signature="e#8374#8375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/colour/ColourManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -943,6 +930,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="138" column="17" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8348#8349#0" expanded="true" />
+            <element signature="e#8374#8375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
