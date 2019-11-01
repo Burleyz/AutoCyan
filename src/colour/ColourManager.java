@@ -79,6 +79,7 @@ public class ColourManager {
         int c2G = c2.getGreen();
         int c2B = c2.getBlue();
 
+        /*
         Output.print("c1R: " + c1R);
         Output.print("c1G: " + c1G);
         Output.print("c1B: " + c1B);
@@ -86,6 +87,7 @@ public class ColourManager {
         Output.print("c2R: " + c2R);
         Output.print("c2G: " + c2G);
         Output.print("c2B: " + c2B);
+        */
 
         //compare with tolerance
         if(Math.abs(c1R - c2R) <= tolerance) {
@@ -106,5 +108,10 @@ public class ColourManager {
 
     public RSObjectColours getObjectColours() {
         return objectColours;
+    }
+
+    public Color getColour(Point p) throws AWTException {
+        Robot robot = new Robot();
+       return robot.getPixelColor(p.x,p.y);
     }
 }

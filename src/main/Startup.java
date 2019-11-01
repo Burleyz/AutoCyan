@@ -1,6 +1,5 @@
 package main;
 
-import colour.ColourManager;
 import data.Data;
 import data.KeyboardKeys;
 import data.LoginPropertiesLoader;
@@ -63,6 +62,8 @@ public class Startup {
         scriptSelector();
 
 
+
+
     }
 
     private static void getOSRSWindow() {
@@ -112,7 +113,7 @@ public class Startup {
         switch (script) {
             case 1:
                 Output.print("Loading ACMining...");
-                ACMining cm = new ACMining(gui); //passes gui to have access to the playscreen data
+                ACMining acMining = new ACMining(gui); //passes gui to have access to the playscreen data
                 break;
         }
     }
@@ -203,6 +204,7 @@ public class Startup {
         }
     }
 
+
     private static void pressEnter(Robot robot) {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
@@ -264,9 +266,6 @@ public class Startup {
         return true;
     }
 
-    private static void rightClickTest() throws AWTException {
-        clickHandler.rightClickPointMobile(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
-    }
 
     public static Gui getGui() {
         return gui;

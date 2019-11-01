@@ -30,9 +30,18 @@ public class LoginPropertiesLoader {
         return accountProperties.getProperty("client_type");
     }
 
+    public String getEmulatorX() { //"Old School RuneScape" or "BlueStacks" etc
+        return accountProperties.getProperty("emulator_x");
+    }
+
+    public String getEmulatorY() { //"Old School RuneScape" or "BlueStacks" etc
+        return accountProperties.getProperty("emulator_y");
+    }
+
     public String getClientName() { //"Old School RuneScape" or "BlueStacks" etc
         return accountProperties.getProperty("client_name");
     }
+
 
     private void setupProperties() {
 

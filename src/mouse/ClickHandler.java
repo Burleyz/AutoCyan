@@ -63,5 +63,13 @@ public class ClickHandler {
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
+    public void clickPointMobile(int x, int y, Rectangle rectangle) throws AWTException{ //used to make sure it clicks inside playscreen not full screen
+        Point topRight = new Point(rectangle.x,rectangle.y); //top left of client window
+
+        bot.mouseMove(x + rectangle.x, y + rectangle.y);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+    }
+
 
 }

@@ -2,6 +2,7 @@ package gui;
 
 import data.Data;
 import data.LoginPropertiesLoader;
+import utils.Output;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,10 @@ public class Gui extends JFrame {
     private Point clientWindowBottomRight;
     private Rectangle clientWindow;
 
+    private Point inventoryBottomRight;
+    private Point inventoryTopLeft;
+    private Rectangle inventory;
+
     //following rectangles are for checking if past login screens
     private Rectangle loginScreenCheckRectangle; //this will check which stage of login we are at
     private Rectangle playScreen;
@@ -25,17 +30,47 @@ public class Gui extends JFrame {
         this.loginPropertiesLoader = loginPropertiesLoader;
     }
 
+    private void generateInventoryLocation() {
+
+    }
+
     public void setupGui() {
 
+        //sets up inventory
+
+
+
+
         setClientHeaderSize();
+        setUpInventory();
         //Sets up client window Rectangle
         clientWindow = new Rectangle();
         clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
+        //inventoryTopLeft = new Point((int)(clientWindowTopLeft.x*2.67),(int)(clientWindowTopLeft.y*3.16)); //figure out how to auto gen invent coords
+
+
+        Output.print("InventTopLeft: " + inventoryTopLeft);
+        Output.print("InventBottomRight: " + inventoryBottomRight);
+        Output.print("ClientTopLeft: " + clientWindowTopLeft);
+        Output.print("ClientBottomRight: " + clientWindowBottomRight);
+
+
+
+
+
+        Output.print("ClientWidth: " + clientWindow.width);
+        Output.print("ClientHeight: " + clientWindow.height);
+
         loginScreenCheckRectangle = new Rectangle();
         loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
 
+        //sets inventory bounds
+        inventory = new Rectangle();
+        inventory.setFrameFromDiagonal(inventoryTopLeft, inventoryBottomRight);
+
         generatePlayScreen();
+
 
              w = new Window(null)
 
@@ -51,6 +86,10 @@ public class Gui extends JFrame {
                 g.drawString(message, (int) clientWindow.getX() + 5, (int) clientWindow.getY() + 40);
                 g.drawRect(clientWindow.x, clientWindow.y, clientWindow.width, clientWindow.height);
                 g.drawRect(playScreen.x,playScreen.y,playScreen.width,playScreen.height);
+
+                g.setColor(Color.BLUE);
+                g.drawRect(inventory.x, inventory.y, inventory.width, inventory.height);
+
 
                 //g.setColor(Color.BLUE);
                 //g.drawRect(loginScreenCheckRectangle.x, loginScreenCheckRectangle.y, loginScreenCheckRectangle.width, loginScreenCheckRectangle.height); //don't draw this when released
@@ -134,10 +173,28 @@ public class Gui extends JFrame {
     private void setClientHeaderSize() {
         if(loginPropertiesLoader.getClientName().equals("OSBuddy Guest - Guest")) {
             clientHeaderSize = 32;
-        } else if(loginPropertiesLoader.getClientName().equals("BlueStacks")) {
-            clientHeaderSize = 40;
+        } else if(loginPropertiesLoader.getClientName().equals("NoxPlayer1")) {
+            clientHeaderSize = 34;
         }
     }
+
+    private void setUpInventory() {
+        inventoryTopLeft = new Point(clientWindowTopLeft.x + 696, clientWindowTopLeft.y + 254);
+        inventoryBottomRight = new Point(clientWindowTopLeft.x + 901, clientWindowTopLeft.y + 536);
+    }
+
+    public Point getInventoryTopLeft() {
+        return inventoryTopLeft;
+    }
+
+    public void setInventoryTopLeft(Point inventoryTopLeft) {
+        this.inventoryTopLeft = inventoryTopLeft;
+    }
+
+    public Rectangle getInventory() {
+        return inventory;
+    }
+
 }
 
 

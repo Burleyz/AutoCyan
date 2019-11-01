@@ -11,7 +11,8 @@ public class Character {
     public Character(Gui gui) {
 
         inventory = new Inventory();
-        //inventory.generateInventPoints(gui);
+        inventory.generateInventSlots(gui);
+        inventory.generateInventSlotPoints();
 
     }
 

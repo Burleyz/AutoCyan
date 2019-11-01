@@ -1,6 +1,7 @@
 package character;
 
-import gui.GUI_old;
+import gui.Gui;
+import mouse.ClickHandler;
 import utils.Output;
 
 import java.awt.*;
@@ -9,11 +10,14 @@ import java.util.ArrayList;
 public class Inventory {
 
     private ArrayList<Rectangle> inventSlots;
+    private ArrayList<Point> inventSlotPoints;
     private Robot bot;
 
     public Inventory() {
 
         inventSlots = new ArrayList<>();
+        inventSlotPoints = new ArrayList<>();
+
         try {
             bot = new Robot();
         } catch (AWTException e) {
@@ -21,10 +25,11 @@ public class Inventory {
         }
     }
 
-    public void generateInventPoints(GUI_old guiOld) { //disgusting code, need to make this more efficient
-        Point inventInnerTopLeft = new Point(guiOld.getInventoryTopLeft()); //gets starting position
+    public void generateInventSlots(Gui gui) { //disgusting code, need to make this more efficient
+        Point inventInnerTopLeft = new Point(gui.getInventoryTopLeft()); //gets starting position
 
-        Rectangle invent = guiOld.getInventory(); //get rect as invent outline
+        Rectangle invent = gui.getInventory(); //get rect as invent outline
+
 
         float width = (float)invent.width;
         float height = (float)invent.height;
@@ -148,5 +153,16 @@ public class Inventory {
 
     public ArrayList<Rectangle> getInventSlots() {
         return inventSlots;
+    }
+
+    public void generateInventSlotPoints() { //generates all the center points of the invent slots
+        ClickHandler ch = new ClickHandler();
+        for (Rectangle rect : inventSlots) {
+            inventSlotPoints.add(ch.getCenter(rect));
+        }
+    }
+
+    public ArrayList<Point> getInventSlotPoints() {
+        return inventSlotPoints;
     }
 }
