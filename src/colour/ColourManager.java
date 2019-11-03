@@ -1,7 +1,6 @@
 package colour;
 
 import gui.Gui;
-import utils.Output;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -41,7 +40,7 @@ public class ColourManager {
                 int blue = c & 0x000000ff;
 
                 if (red == color.getRed() && green == color.getGreen() && blue == color.getBlue()) {
-                    Output.print("Colour found!");
+                    System.out.println("Colour found!");
                     pointsFound.add(new Point(x, y));
                 }
             }
@@ -80,13 +79,13 @@ public class ColourManager {
         int c2B = c2.getBlue();
 
         /*
-        Output.print("c1R: " + c1R);
-        Output.print("c1G: " + c1G);
-        Output.print("c1B: " + c1B);
+        System.out.println("c1R: " + c1R);
+        System.out.println("c1G: " + c1G);
+        System.out.println("c1B: " + c1B);
 
-        Output.print("c2R: " + c2R);
-        Output.print("c2G: " + c2G);
-        Output.print("c2B: " + c2B);
+        System.out.println("c2R: " + c2R);
+        System.out.println("c2G: " + c2G);
+        System.out.println("c2B: " + c2B);
         */
 
         //compare with tolerance
@@ -110,8 +109,8 @@ public class ColourManager {
         return objectColours;
     }
 
-    public Color getColour(Point p) throws AWTException {
+    public Color getColour(Point p, Rectangle rect) throws AWTException {
         Robot robot = new Robot();
-       return robot.getPixelColor(p.x,p.y);
+       return robot.getPixelColor(p.x + rect.x,p.y + rect.y);
     }
 }

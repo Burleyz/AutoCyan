@@ -24,7 +24,7 @@ public class SaveImageFromUrl {
         is.close();
         os.close();
 
-        Output.print("Generated world map!");
+        System.out.println("Generated world map!");
     }
 
 }

@@ -1,7 +1,5 @@
 package world;
 
-import utils.Output;
-
 import java.io.File;
 
 public class WorldMapHandler {
@@ -15,11 +13,11 @@ public class WorldMapHandler {
         boolean exists = tempFile.exists();
 
         if(!exists) {
-            Output.print("Generating world map...");
+            System.out.println("Generating world map...");
             WorldMapParser.generateWorldMap();
 
         }
 
-        Output.print("World Map file already exists.");
+        System.out.println("World Map file already exists.");
     }
 }

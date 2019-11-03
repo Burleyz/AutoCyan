@@ -1,6 +1,5 @@
 package character;
 
-import gui.GUI_old;
 import gui.Gui;
 
 public class Character {

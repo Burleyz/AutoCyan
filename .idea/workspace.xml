@@ -7,28 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scripts/ACFletching.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocyan.properties" beforeDir="false" afterPath="$PROJECT_DIR$/autocyan.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/autocyan.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Character.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/colour/ColourManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/colour/RSObjectColours.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/colour/RSObjectColours.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/data/LoginPropertiesLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/data/LoginPropertiesLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI_old$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI_old.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/mouse/ClickHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/mouse/ClickHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACMining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACMining.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACMining.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/utils/Output.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/utils/SaveImageFromUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/utils/SaveImageFromUrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/world/WorldMapHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/world/WorldMapHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/colour/ColourManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colour/ColourManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colour/RSObjectColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/colour/RSObjectColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI_old.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mouse/ClickHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouse/ClickHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/ACMining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACMining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Output.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/SaveImageFromUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/SaveImageFromUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/world/WorldMapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/WorldMapHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +48,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="115" column="89" selection-start-line="115" selection-start-column="89" selection-end-line="115" selection-end-column="89" />
+            <state relative-caret-position="334">
+              <caret line="126" column="9" lean-forward="true" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8606#8607#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/ACMining.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1409">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,10 +71,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scripts/ACMining.java">
+        <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="102" column="44" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,22 +83,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/colour/RSObjectColours.java">
+        <entry file="file://$PROJECT_DIR$/src/colour/ColourManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="134" selection-start-line="17" selection-start-column="134" selection-end-line="17" selection-end-column="134" />
+            <state relative-caret-position="111">
+              <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autocyan.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -87,35 +99,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="125" column="25" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/WhatsMyColor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-833">
-              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state relative-caret-position="1020">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2751#2752#0" expanded="true" />
-                <element signature="e#2799#2800#0" expanded="true" />
-                <element signature="e#2864#2865#0" expanded="true" />
-                <element signature="e#2903#2904#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/LoginPropertiesLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#4618#4619#0" expanded="true" />
+                <element signature="e#4658#4659#0" expanded="true" />
+                <element signature="e#5340#5341#0" expanded="true" />
+                <element signature="e#5402#5403#0" expanded="true" />
+                <element signature="e#5605#5606#0" expanded="true" />
+                <element signature="e#5653#5654#0" expanded="true" />
+                <element signature="e#5994#5995#0" expanded="true" />
+                <element signature="e#6029#6030#0" expanded="true" />
+                <element signature="e#6157#6158#0" expanded="true" />
+                <element signature="e#6190#6191#0" expanded="true" />
+                <element signature="e#6763#6764#0" expanded="true" />
+                <element signature="e#6802#6803#0" expanded="true" />
+                <element signature="e#6865#6866#0" expanded="true" />
+                <element signature="e#6921#6922#0" expanded="true" />
+                <element signature="e#6960#6961#0" expanded="true" />
+                <element signature="e#6992#6993#0" expanded="true" />
+                <element signature="e#7037#7038#0" expanded="true" />
+                <element signature="e#7073#7074#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,7 +143,14 @@
       <find>rightClickPo</find>
       <find>header</find>
       <find>generate</find>
+      <find>Output.print(</find>
+      <find>Output</find>
+      <find>Output.print</find>
+      <find>update</find>
     </findStrings>
+    <replaceStrings>
+      <replace>System.out.println</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/Time.java" />
         <option value="$PROJECT_DIR$/src/antiban/AntiBan.java" />
         <option value="$PROJECT_DIR$/src/utils/MouseController.java" />
         <option value="$PROJECT_DIR$/src/utils/Application1.java" />
@@ -157,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/utils/PrintString.java" />
         <option value="$PROJECT_DIR$/src/character/Prayer.java" />
         <option value="$PROJECT_DIR$/src/character/LoginHandler.java" />
-        <option value="$PROJECT_DIR$/src/utils/SaveImageFromUrl.java" />
         <option value="$PROJECT_DIR$/src/world/WorldMapParser.java" />
         <option value="$PROJECT_DIR$/src/utils/ColourManager.java" />
         <option value="$PROJECT_DIR$/src/colour/ItemColours.java" />
@@ -165,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/utils/WhatsMyColour.java" />
         <option value="$PROJECT_DIR$/src/scripts/Controller.java" />
         <option value="$PROJECT_DIR$/src/utils/Output.java" />
-        <option value="$PROJECT_DIR$/src/world/WorldMapHandler.java" />
         <option value="$PROJECT_DIR$/src/scripts/PowerMiner.java" />
         <option value="$PROJECT_DIR$/src/npc/Npc.java" />
         <option value="$PROJECT_DIR$/src/colour/NPCColours.java" />
@@ -188,24 +196,27 @@
         <option value="$PROJECT_DIR$/src/scripts/CyanMobileMiner.java" />
         <option value="$PROJECT_DIR$/src/main/Controller.java" />
         <option value="$PROJECT_DIR$/src/scripts/Script.java" />
-        <option value="$PROJECT_DIR$/src/mouse/ClickHandler.java" />
         <option value="$PROJECT_DIR$/src/character/Character.java" />
-        <option value="$PROJECT_DIR$/src/character/Inventory.java" />
-        <option value="$PROJECT_DIR$/src/main/Startup.java" />
-        <option value="$PROJECT_DIR$/src/colour/ColourManager.java" />
         <option value="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" />
         <option value="$PROJECT_DIR$/autocyan.properties" />
-        <option value="$PROJECT_DIR$/src/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/colour/RSObjectColours.java" />
+        <option value="$PROJECT_DIR$/src/mouse/ClickHandler.java" />
+        <option value="$PROJECT_DIR$/src/character/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/utils/SaveImageFromUrl.java" />
+        <option value="$PROJECT_DIR$/src/world/WorldMapHandler.java" />
         <option value="$PROJECT_DIR$/src/scripts/ACMining.java" />
+        <option value="$PROJECT_DIR$/src/main/Startup.java" />
+        <option value="$PROJECT_DIR$/src/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/colour/ColourManager.java" />
+        <option value="$PROJECT_DIR$/src/scripts/ACFletching.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-26" />
-    <option name="y" value="33" />
-    <option name="width" value="1073" />
-    <option name="height" value="975" />
+    <option name="x" value="2684" />
+    <option name="y" value="90" />
+    <option name="width" value="931" />
+    <option name="height" value="600" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -218,24 +229,6 @@
             <path>
               <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="AutoCyan_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
@@ -317,25 +310,25 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572644355944" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572823434273" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/jna-5.4.0.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan" />
-      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\src\data" />
-      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\dependancies" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="gui" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\out\artifacts\AutoCyan_jar" />
       <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\libs" />
       <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="gui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan" />
+      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\src\data" />
+      <recent name="C:\Users\Jack Griffiths\IdeaProjects\AutoCyan\dependancies" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -507,12 +500,27 @@
       <option name="project" value="LOCAL" />
       <updated>1572508603634</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Inventory setup built, works now properly&#10;&#10;Added methods for ACMining">
+      <created>1572644412928</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572644412932</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -523,14 +531,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25135428" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5557963" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -580,18 +588,11 @@
     <MESSAGE value="Updated LoginHandler - Fully working! Added mobile support for Login" />
     <MESSAGE value="Updated LoginHandler - Client selection adjusted&#10;&#10;Started ACMiner development" />
     <MESSAGE value="Created .jar artifact" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created .jar artifact" />
+    <MESSAGE value="Inventory setup built, works now properly&#10;&#10;Added methods for ACMining" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inventory setup built, works now properly&#10;&#10;Added methods for ACMining" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/ClickMouse.java" />
     <entry file="file://$PROJECT_DIR$/src/character/InventoryManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/antiban/AntiBan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
@@ -648,16 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="270" selection-start-line="270" selection-end-line="270" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/world/WorldMapHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,29 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Output.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#83#84#0" expanded="true" />
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -764,27 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/AutoCyan_jar/autocyan.properties" />
-    <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="66" column="88" selection-start-line="66" selection-start-column="88" selection-end-line="66" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GUI_old.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="107" selection-start-line="107" selection-end-line="114" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,34 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/colour/ColourManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#2846#2847#0" expanded="true" />
-            <element signature="e#2879#2880#0" expanded="true" />
-            <element signature="e#2928#2929#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/character/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10156#10157#0" expanded="true" />
-            <element signature="e#10195#10196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/LoginPropertiesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -854,10 +773,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/colour/RSObjectColours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antiban/AntiBan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Output.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#83#84#0" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/WhatsMyColor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-833">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2751#2752#0" expanded="true" />
@@ -868,37 +819,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
+    <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="125" column="25" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="115" column="89" selection-start-line="115" selection-start-column="89" selection-end-line="115" selection-end-column="89" />
+        <state relative-caret-position="595">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/colour/RSObjectColours.java">
+    <entry file="file://$PROJECT_DIR$/src/world/WorldMapHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="134" selection-start-line="17" selection-start-column="134" selection-end-line="17" selection-end-column="134" />
+        <state relative-caret-position="170">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/character/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/AutoCyan_jar/autocyan.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GUI_old.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="107" selection-start-line="107" selection-end-line="114" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="126" column="9" lean-forward="true" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8606#8607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="e#4618#4619#0" expanded="true" />
+            <element signature="e#4658#4659#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
+            <element signature="e#5402#5403#0" expanded="true" />
+            <element signature="e#5605#5606#0" expanded="true" />
+            <element signature="e#5653#5654#0" expanded="true" />
+            <element signature="e#5994#5995#0" expanded="true" />
+            <element signature="e#6029#6030#0" expanded="true" />
+            <element signature="e#6157#6158#0" expanded="true" />
+            <element signature="e#6190#6191#0" expanded="true" />
+            <element signature="e#6763#6764#0" expanded="true" />
+            <element signature="e#6802#6803#0" expanded="true" />
+            <element signature="e#6865#6866#0" expanded="true" />
+            <element signature="e#6921#6922#0" expanded="true" />
+            <element signature="e#6960#6961#0" expanded="true" />
+            <element signature="e#6992#6993#0" expanded="true" />
+            <element signature="e#7037#7038#0" expanded="true" />
+            <element signature="e#7073#7074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/colour/ColourManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/ACMining.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="102" column="44" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
+        <state relative-caret-position="-1409">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

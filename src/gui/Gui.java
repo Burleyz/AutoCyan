@@ -2,7 +2,6 @@ package gui;
 
 import data.Data;
 import data.LoginPropertiesLoader;
-import utils.Output;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,20 +24,28 @@ public class Gui extends JFrame {
     private LoginPropertiesLoader loginPropertiesLoader;
     private int clientHeaderSize;
 
+    //for mining
+    private Rectangle rockA;
+    private Rectangle rockB;
+
+    private boolean mining;
+    private boolean fletching;
+
+    //for fletching
+    private Rectangle bank;
+    private Rectangle bankSlot1;
+    private Rectangle bankExit;
+    private Rectangle selectShortbow;
+    private Rectangle selectLongbow;
+
 
     public Gui(LoginPropertiesLoader loginPropertiesLoader) {
         this.loginPropertiesLoader = loginPropertiesLoader;
+        mining = false;
     }
 
-    private void generateInventoryLocation() {
-
-    }
 
     public void setupGui() {
-
-        //sets up inventory
-
-
 
 
         setClientHeaderSize();
@@ -50,17 +57,17 @@ public class Gui extends JFrame {
         //inventoryTopLeft = new Point((int)(clientWindowTopLeft.x*2.67),(int)(clientWindowTopLeft.y*3.16)); //figure out how to auto gen invent coords
 
 
-        Output.print("InventTopLeft: " + inventoryTopLeft);
-        Output.print("InventBottomRight: " + inventoryBottomRight);
-        Output.print("ClientTopLeft: " + clientWindowTopLeft);
-        Output.print("ClientBottomRight: " + clientWindowBottomRight);
+        System.out.println("InventTopLeft: " + inventoryTopLeft);
+        System.out.println("InventBottomRight: " + inventoryBottomRight);
+        System.out.println("ClientTopLeft: " + clientWindowTopLeft);
+        System.out.println("ClientBottomRight: " + clientWindowBottomRight);
 
 
 
 
 
-        Output.print("ClientWidth: " + clientWindow.width);
-        Output.print("ClientHeight: " + clientWindow.height);
+        System.out.println("ClientWidth: " + clientWindow.width);
+        System.out.println("ClientHeight: " + clientWindow.height);
 
         loginScreenCheckRectangle = new Rectangle();
         loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
@@ -68,6 +75,28 @@ public class Gui extends JFrame {
         //sets inventory bounds
         inventory = new Rectangle();
         inventory.setFrameFromDiagonal(inventoryTopLeft, inventoryBottomRight);
+
+
+
+
+        //mining
+        rockA = new Rectangle();
+        rockB = new Rectangle();
+        rockA.setFrameFromDiagonal(new Point(323,400), new Point(323+10,400+10));
+        rockB.setFrameFromDiagonal(new Point(432,325), new Point(432+10,325+10));
+
+        //fletching
+        bank = new Rectangle();
+        bankExit = new Rectangle();
+        bankSlot1 = new Rectangle();
+        selectShortbow = new Rectangle();
+        selectLongbow = new Rectangle();
+
+        bank.setFrameFromDiagonal(new Point(649,315),new Point(649+10,315+10));
+        bankExit.setFrameFromDiagonal(new Point(652,215),new Point(652+10,215+10));
+        bankSlot1.setFrameFromDiagonal(new Point(221,296),new Point(221+10,296+10));
+        selectLongbow.setFrameFromDiagonal(new Point(272,126),new Point(272+10,126+10));
+        selectShortbow.setFrameFromDiagonal(new Point(195,130),new Point(195+10,130+10));
 
         generatePlayScreen();
 
@@ -89,6 +118,22 @@ public class Gui extends JFrame {
 
                 g.setColor(Color.BLUE);
                 g.drawRect(inventory.x, inventory.y, inventory.width, inventory.height);
+
+                if(mining) {
+                    g.setColor(Color.GREEN);
+                    g.drawRect(rockA.x + clientWindow.x - 5,rockA.y + clientWindow.y - 5,rockA.width,rockA.height); //-5 so the checkColour doesn't see the green
+                    g.drawRect(rockB.x + clientWindow.x - 5,rockB.y + clientWindow.y - 5,rockB.width,rockB.height);
+                } else if(fletching) {
+                    g.setColor(Color.GREEN);
+                    g.drawRect(bank.x + clientWindow.x -5,bank.y + clientWindow.y - 5,bank.width,bank.height);
+                    g.drawRect(bankExit.x + clientWindow.x -5,bankExit.y + clientWindow.y - 5,bankExit.width,bankExit.height);
+                    g.drawRect(bankSlot1.x + clientWindow.x -5,bankSlot1.y + clientWindow.y - 5,bankSlot1.width,bankSlot1.height);
+                    g.drawRect(selectLongbow.x + clientWindow.x -5,selectLongbow.y + clientWindow.y - 5,selectLongbow.width,selectLongbow.height);
+                    g.drawRect(selectShortbow.x + clientWindow.x -5,selectShortbow.y + clientWindow.y - 5,selectShortbow.width,selectShortbow.height);
+                }
+
+
+
 
 
                 //g.setColor(Color.BLUE);
@@ -195,6 +240,13 @@ public class Gui extends JFrame {
         return inventory;
     }
 
+    public void setMining(boolean mining) {
+        this.mining = mining;
+    }
+
+    public void setFletching(boolean fletching) {
+        this.fletching = fletching;
+    }
 }
 
 

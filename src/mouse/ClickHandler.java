@@ -2,7 +2,6 @@ package mouse;
 
 import antiban.AntiBan;
 import character.Inventory;
-import utils.Output;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
@@ -25,8 +24,8 @@ public class ClickHandler {
 
     public void clickInventSlot(int position, Inventory inventory) {
         Point center = getCenter(inventory.getInventSlots().get(position)); //gets center of rectangle
-        Output.print("Top Left: " + inventory.getInventSlots().get(position).toString());
-        Output.print("Clicked -- x: " + center.x + " y: " + center.y);
+        System.out.println("Top Left: " + inventory.getInventSlots().get(position).toString());
+        System.out.println("Clicked -- x: " + center.x + " y: " + center.y);
 
         try {
             clickPoint(center.x + AntiBan.randomValue(-3,3), center.y + AntiBan.randomValue(-3,3)); //position 1 = 0, position 28 = 27
@@ -50,7 +49,7 @@ public class ClickHandler {
     }
 
     public void rightClickPointMobile(int x, int y) throws AWTException {
-        Output.print("Right clicking!");
+        System.out.println("Right clicking!");
         bot.mouseMove(x, y);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.delay(1000);
@@ -63,13 +62,6 @@ public class ClickHandler {
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
-    public void clickPointMobile(int x, int y, Rectangle rectangle) throws AWTException{ //used to make sure it clicks inside playscreen not full screen
-        Point topRight = new Point(rectangle.x,rectangle.y); //top left of client window
-
-        bot.mouseMove(x + rectangle.x, y + rectangle.y);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-    }
 
 
 }

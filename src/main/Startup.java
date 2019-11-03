@@ -5,9 +5,9 @@ import data.KeyboardKeys;
 import data.LoginPropertiesLoader;
 import gui.Gui;
 import mouse.ClickHandler;
+import scripts.ACFletching;
 import scripts.ACMining;
 import utils.GetWindowRect;
-import utils.Output;
 import utils.Time;
 
 import javax.imageio.ImageIO;
@@ -42,14 +42,14 @@ public class Startup {
 
 
     public static void main(String[] args) {
-        Output.print("Starting AutoCyan - Version: " + Data.getVERSION());
-        Output.print("Getting OSRS instance...");
+        System.out.println("Starting AutoCyan - Version: " + Data.getVERSION());
+        System.out.println("Getting OSRS instance...");
         initClasses();
         getOSRSWindow();
         launchGui();
 
 
-        Time.rest(5000);
+        Time.rest(2000);
         try {
             login(loginPropertiesLoader.getClientType());
         } catch (AWTException e) {
@@ -57,9 +57,13 @@ public class Startup {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Time.rest(5000);
+        Time.rest(2000);
+
+
 
         scriptSelector();
+
+
 
 
 
@@ -82,26 +86,27 @@ public class Startup {
             System.out.printf("The corner locations for the window \"%s\" are %s",
                     loginPropertiesLoader.getClientName(), Arrays.toString(rect));
 
-            Output.print("\n");
+            System.out.println("\n");
 
         } catch (GetWindowRect.WindowNotFoundException e) {
             e.printStackTrace();
-            Output.print("Instance not found! Please start Old School RuneScape Client!");
-            Output.print("Client aborting...");
+            System.out.println("Instance not found! Please start Old School RuneScape Client!");
+            System.out.println("Client aborting...");
             System.exit(-1);
 
         } catch (GetWindowRect.GetWindowRectException e) {
             e.printStackTrace();
-            Output.print("Client aborting...");
+            System.out.println("Client aborting...");
             System.exit(-1);
         }
     }
 
     private static void scriptSelector() {
         scanner = new Scanner(System.in);
-        Output.print("\n");
-        Output.print("Which script would you like to run?");
-        Output.print("1: ACMining (PowerMining)");
+        System.out.println("\n");
+        System.out.println("Which script would you like to run?");
+        System.out.println("1: ACMining (PowerMining)");
+        System.out.println("2: ACFletching");
         int answer = scanner.nextInt();
         Time.rest(1000);
         loadScript(answer);
@@ -112,16 +117,20 @@ public class Startup {
     private static void loadScript(int script) {
         switch (script) {
             case 1:
-                Output.print("Loading ACMining...");
+                System.out.println("Loading ACMining...");
                 ACMining acMining = new ACMining(gui); //passes gui to have access to the playscreen data
                 break;
+
+            case 2:
+                System.out.println("Loading ACFletching...");
+                ACFletching acFletching = new ACFletching(gui);
         }
     }
 
 
 
     private static void launchGui() {
-        Output.print("Latching onto instance!");
+        System.out.println("Latching onto instance!");
         gui = new Gui(loginPropertiesLoader);
         gui.setClientWindowTopLeft(new Point(clientRectangleTopX, clientRectangleTopY));
         gui.setClientWindowBottomRight(new Point(clientRectangleBottomX, clientRectangleBottomY));
@@ -131,7 +140,7 @@ public class Startup {
     private static void login(String clientType) throws AWTException, IOException {
 
         boolean tf = true;
-        Output.print("Attempting to login...");
+        System.out.println("Attempting to login...");
         if (clientType.equals("desktop")) {
 
             KeyboardKeys kk = new KeyboardKeys();
@@ -154,7 +163,7 @@ public class Startup {
 
                 } else if (checkLoginScreen(2)) { //checking which login screen, if on correct screen (screen 2) then do type chars
 
-                    Output.print("Typing username and password...");
+                    System.out.println("Typing username and password...");
                     for (char c : username.toCharArray()) {
                         kk.keyPress(c);
                         robot.delay(100);
@@ -177,20 +186,20 @@ public class Startup {
                     clickHandler.clickPoint(393, 380, gui.getClientWindow());
 
                 } else if (checkLoginScreen(4)) {
-                    Output.print("Credentials are incorrect in autocyan.properties!");
+                    System.out.println("Credentials are incorrect in autocyan.properties!");
                     System.exit(-1);
 
 
                 } else {
-                    Output.print("Account is logged in.");
-                    Output.print("Login completed!\n");
+                    System.out.println("Account is logged in.");
+                    System.out.println("Login completed!\n");
                 }
             }
 
 
         } else if (clientType.equals("mobile")) {
 
-            Output.print("Mobile client - Please run script when already logged in!");
+            System.out.println("Mobile client - Please run script when already logged in!");
             /*
             NOT WORKING, CLICK WONT REGISTER - Login manually
 
@@ -198,7 +207,7 @@ public class Startup {
             clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
             Time.rest(2000);
             clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
-            Output.print("Login completed!\n");
+            System.out.println("Login completed!\n");
             */
 
         }
@@ -244,7 +253,7 @@ public class Startup {
     private static boolean compareImages(BufferedImage imgA, BufferedImage imgB) {
         // The images must be the same size.
         if (imgA.getWidth() != imgB.getWidth() || imgA.getHeight() != imgB.getHeight()) {
-            //Output.print("Image widths/Heights are different!");
+            //System.out.println("Image widths/Heights are different!");
             return false;
 
         }
@@ -257,7 +266,7 @@ public class Startup {
             for (int x = 0; x < width; x++) {
                 // Compare the pixels for equality.
                 if (imgA.getRGB(x, y) != imgB.getRGB(x, y)) {
-                    //Output.print("Images are not the same!");
+                    //System.out.println("Images are not the same!");
                     return false;
                 }
             }
