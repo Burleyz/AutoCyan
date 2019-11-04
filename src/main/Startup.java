@@ -118,12 +118,24 @@ public class Startup {
         switch (script) {
             case 1:
                 System.out.println("Loading ACMining...");
-                ACMining acMining = new ACMining(gui); //passes gui to have access to the playscreen data
+                scanner = new Scanner(System.in);
+                System.out.println("\n");
+                System.out.println("Where are you mining?");
+                System.out.println("1: Varrock East");
+                System.out.println("2: Mining Guild");
+                int answer = scanner.nextInt();
+                ACMining acMining = new ACMining(gui, answer); //passes gui to have access to the playscreen data
                 break;
 
             case 2:
                 System.out.println("Loading ACFletching...");
-                ACFletching acFletching = new ACFletching(gui);
+                scanner = new Scanner(System.in);
+                System.out.println("\n");
+                System.out.println("What are you fletching?");
+                System.out.println("1: Shortbows");
+                System.out.println("2: Longbows");
+                int fletchingType = scanner.nextInt();
+                ACFletching acFletching = new ACFletching(gui, fletchingType);
         }
     }
 
@@ -226,10 +238,10 @@ public class Startup {
         BufferedImage loginScreen3;
         BufferedImage invalidCredentials;
 
-            loginScreen1 = ImageIO.read(new File("./login_screen_1.png"));
-            loginScreen2 = ImageIO.read(new File("./login_screen_2.png"));
-            loginScreen3 = ImageIO.read(new File("./login_screen_3.png"));
-            invalidCredentials = ImageIO.read((new File("./invalid_credentials.png")));
+            loginScreen1 = ImageIO.read(new File(".images//login_screen_1.png"));
+            loginScreen2 = ImageIO.read(new File("./images/login_screen_2.png"));
+            loginScreen3 = ImageIO.read(new File("./images/login_screen_3.png"));
+            invalidCredentials = ImageIO.read((new File("./images/invalid_credentials.png")));
 
         switch(screen) {
             case 1:

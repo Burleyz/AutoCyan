@@ -25,11 +25,17 @@ public class Gui extends JFrame {
     private int clientHeaderSize;
 
     //for mining
-    private Rectangle rockA;
-    private Rectangle rockB;
+    private Rectangle varrockEastRockA;
+    private Rectangle varrockEastRockB;
+    private Rectangle miningGuildRockA;
+    private Rectangle miningGuildRockB;
+    private Rectangle miningGuildRockC;
+    private String miningLocation;
 
     private boolean mining;
     private boolean fletching;
+
+    private int ra; //rectangle addition: the size of the green squares on screen
 
     //for fletching
     private Rectangle bank;
@@ -42,6 +48,7 @@ public class Gui extends JFrame {
     public Gui(LoginPropertiesLoader loginPropertiesLoader) {
         this.loginPropertiesLoader = loginPropertiesLoader;
         mining = false;
+        ra = 20;
     }
 
 
@@ -80,10 +87,19 @@ public class Gui extends JFrame {
 
 
         //mining
-        rockA = new Rectangle();
-        rockB = new Rectangle();
-        rockA.setFrameFromDiagonal(new Point(323,400), new Point(323+10,400+10));
-        rockB.setFrameFromDiagonal(new Point(432,325), new Point(432+10,325+10));
+        varrockEastRockA = new Rectangle();
+        varrockEastRockB = new Rectangle();
+        varrockEastRockA.setFrameFromDiagonal(new Point(323,400), new Point(323+ra,400+ra));
+        varrockEastRockB.setFrameFromDiagonal(new Point(432,325), new Point(432+ra,325+ra));
+
+        miningGuildRockA = new Rectangle();
+        miningGuildRockB = new Rectangle();
+        miningGuildRockC = new Rectangle();
+        miningGuildRockA.setFrameFromDiagonal(new Point(339, 438),new Point(339+ra, 438+ra));
+        miningGuildRockB.setFrameFromDiagonal(new Point(430,333),new Point(430+ra,333+ra));
+        miningGuildRockC.setFrameFromDiagonal(new Point(620,374),new Point(620+ra,374+ra));
+
+
 
         //fletching
         bank = new Rectangle();
@@ -92,11 +108,11 @@ public class Gui extends JFrame {
         selectShortbow = new Rectangle();
         selectLongbow = new Rectangle();
 
-        bank.setFrameFromDiagonal(new Point(649,315),new Point(649+10,315+10));
-        bankExit.setFrameFromDiagonal(new Point(652,215),new Point(652+10,215+10));
-        bankSlot1.setFrameFromDiagonal(new Point(221,296),new Point(221+10,296+10));
-        selectLongbow.setFrameFromDiagonal(new Point(272,126),new Point(272+10,126+10));
-        selectShortbow.setFrameFromDiagonal(new Point(195,130),new Point(195+10,130+10));
+        bank.setFrameFromDiagonal(new Point(649,315),new Point(649+ra,315+ra));
+        bankExit.setFrameFromDiagonal(new Point(652,215),new Point(652+ra,215+ra));
+        bankSlot1.setFrameFromDiagonal(new Point(221,296),new Point(221+ra,296+ra));
+        selectLongbow.setFrameFromDiagonal(new Point(272,126),new Point(272+ra,126+ra));
+        selectShortbow.setFrameFromDiagonal(new Point(195,130),new Point(195+ra,130+ra));
 
         generatePlayScreen();
 
@@ -111,6 +127,7 @@ public class Gui extends JFrame {
                 g.setFont(font);
                 g.setColor(Color.RED);
 
+
                 final String message = "AutoCyan - Version: " + Data.getVERSION();
                 g.drawString(message, (int) clientWindow.getX() + 5, (int) clientWindow.getY() + 40);
                 g.drawRect(clientWindow.x, clientWindow.y, clientWindow.width, clientWindow.height);
@@ -120,9 +137,16 @@ public class Gui extends JFrame {
                 g.drawRect(inventory.x, inventory.y, inventory.width, inventory.height);
 
                 if(mining) {
-                    g.setColor(Color.GREEN);
-                    g.drawRect(rockA.x + clientWindow.x - 5,rockA.y + clientWindow.y - 5,rockA.width,rockA.height); //-5 so the checkColour doesn't see the green
-                    g.drawRect(rockB.x + clientWindow.x - 5,rockB.y + clientWindow.y - 5,rockB.width,rockB.height);
+                    if(miningLocation == "varrock_east") {
+                        g.setColor(Color.GREEN);
+                        g.drawRect(varrockEastRockA.x + clientWindow.x - 5, varrockEastRockA.y + clientWindow.y - 5, varrockEastRockA.width, varrockEastRockA.height); //-5 so the checkColour doesn't see the green
+                        g.drawRect(varrockEastRockB.x + clientWindow.x - 5, varrockEastRockB.y + clientWindow.y - 5, varrockEastRockB.width, varrockEastRockB.height);
+                    } else if (miningLocation == "mining_guild") {
+                        g.setColor(Color.GREEN);
+                        g.drawRect(miningGuildRockA.x + clientWindow.x - 5, miningGuildRockA.y + clientWindow.y - 5, miningGuildRockA.width, miningGuildRockA.height);
+                        g.drawRect(miningGuildRockB.x + clientWindow.x - 5, miningGuildRockB.y + clientWindow.y - 5, miningGuildRockB.width, miningGuildRockB.height);
+                        g.drawRect(miningGuildRockC.x + clientWindow.x - 5, miningGuildRockC.y + clientWindow.y - 5, miningGuildRockC.width, miningGuildRockC.height);
+                    }
                 } else if(fletching) {
                     g.setColor(Color.GREEN);
                     g.drawRect(bank.x + clientWindow.x -5,bank.y + clientWindow.y - 5,bank.width,bank.height);
@@ -246,6 +270,10 @@ public class Gui extends JFrame {
 
     public void setFletching(boolean fletching) {
         this.fletching = fletching;
+    }
+
+    public void setMiningLocation(String miningLocation) {
+        this.miningLocation = miningLocation;
     }
 }
 
