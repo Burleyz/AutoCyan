@@ -1,7 +1,7 @@
 package main;
 
 import data.Data;
-import data.KeyboardKeys;
+import utils.KeyboardKeys;
 import data.LoginPropertiesLoader;
 import gui.Gui;
 import mouse.ClickHandler;
