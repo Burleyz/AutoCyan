@@ -6,6 +6,6 @@ RuneScape Mobile Bot
 - ACFletching: Makes shortbows(u) or Longbows(u)
 
 **Discord**
-https://discord.gg/rDntamv
+- https://discord.gg/rDntamv
 
 All scripts have built in Anti-Ban and error detection
