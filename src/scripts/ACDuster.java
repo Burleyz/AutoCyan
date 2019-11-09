@@ -23,15 +23,15 @@ public class ACDuster {
     private static Point bankExit;
     private static Point checkBankPoint;
     private static RSObject bank;
-
+    private int dustCounter;
 
     public ACDuster(Gui gui) {
         this.gui = gui;
         clickHandler = new ClickHandler();
         colourManager = new ColourManager(gui);
         player = new Character(gui);
-
         bank = new RSObject("BANK_CHECK");
+        dustCounter = 0;
 
         gui.setDusting(true);
         gui.setupGui();
@@ -73,7 +73,9 @@ public class ACDuster {
            counter++;
         }
 
-        checkPosition();
+        dustCounter = dustCounter + 27;
+        System.out.println("Dust created so far: " + dustCounter);
+
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(700,1200));
 
@@ -88,8 +90,8 @@ public class ACDuster {
 
     private void checkPosition() throws AWTException {
 
-        System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
-        System.out.println("BANK Colour: " + bank.getColors()[0]);
+        //System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
+        //System.out.println("BANK Colour: " + bank.getColors()[0]);
 
         if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()), bank.getColors()[0],20)) {
 

@@ -32,6 +32,7 @@ public class ACMining {
     private static Point mgRockBLocation;
     private static Point mgRockCLocation;
 
+
     private int mineDelay;
 
 

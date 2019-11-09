@@ -72,7 +72,6 @@ public class ACHerblore {
             counter++;
         }
 
-        checkPosition();
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(700,1200));
 
