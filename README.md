@@ -1,6 +1,9 @@
 # AutoCyan
 RuneScape Mobile Bot
 
+**Version**
+Release Beta: V1.0
+
 **Scripts**
 - ACMining: Iron powermining scrip that supports Varrock East and the Mining Guild
 - ACFletching: Makes shortbows(u) or Longbows(u)
