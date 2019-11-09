@@ -17,6 +17,7 @@ public class RSObjectColours {
     public void initRocks() {
         rsObjects.put("IRON_ROCK", new Color[] {new Color(109,75,60),new Color(111,105,105)}); //first is when live, 2nd is when mined
         rsObjects.put("UNIDENTIFIED_MINERALS", new Color[] {new Color(117,91,8)});
+        rsObjects.put("BANK_BOOTH",new Color[] {new Color(137,120,58)});
     }
 
     public void initOres() {

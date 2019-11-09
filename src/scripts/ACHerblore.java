@@ -5,6 +5,7 @@ import character.Character;
 import colour.ColourManager;
 import gui.Gui;
 import mouse.ClickHandler;
+import objects.RSObject;
 import utils.Time;
 
 import java.awt.*;
@@ -17,11 +18,11 @@ public class ACHerblore {
     private static ColourManager colourManager;
     private static ClickHandler clickHandler;
     private static Gui gui;
-    private static Point bank;
+    private static Point bankLocation;
     private static Point bankSlot1;
     private static Point bankExit;
     private static Point checkBankPoint;
-    private static final Color BANK_COLOR = new Color(137,120,58);
+    private static RSObject bank;
 
 
     public ACHerblore(Gui gui) {
@@ -29,6 +30,8 @@ public class ACHerblore {
         clickHandler = new ClickHandler();
         colourManager = new ColourManager(gui);
         player = new Character(gui);
+
+        bank = new RSObject("BANK_BOOTH", colourManager);
 
         gui.setDusting(true);
         gui.setupGui();
@@ -50,7 +53,7 @@ public class ACHerblore {
     }
 
     private void clean() throws AWTException {
-        clickHandler.clickPoint(bank.x + AntiBan.randomValue(1,10),bank.y + AntiBan.randomValue(1,10),gui.getClientWindow());
+        clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(1000,1300));
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
         Time.rest(AntiBan.randomValue(700,1400));
@@ -69,13 +72,13 @@ public class ACHerblore {
         }
 
         checkPosition();
-        clickHandler.clickPoint(bank.x + AntiBan.randomValue(1,10),bank.y + AntiBan.randomValue(1,10),gui.getClientWindow());
+        clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(700,1200));
 
     }
 
     private void initPoints() {
-        bank = new Point(649,315);
+        bankLocation = new Point(649,315);
         bankSlot1 = new Point(221,296);
         bankExit = new Point(652,215);
         checkBankPoint = new Point(618,352);
@@ -84,9 +87,9 @@ public class ACHerblore {
     private void checkPosition() throws AWTException {
 
         System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
-        System.out.println("BANK Colour: " + BANK_COLOR);
+        System.out.println("BANK Colour: " + bank);
 
-        if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()),BANK_COLOR,20)) {
+        if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()), bank.getColors()[0],20)) {
 
         } else {
             Time.rest(1000);
