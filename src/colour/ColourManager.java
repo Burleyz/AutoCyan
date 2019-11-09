@@ -9,14 +9,10 @@ import java.util.ArrayList;
 public class ColourManager {
     
     private Robot bot;
-    private NPCColours npcColours;
     private Gui gui;
-    private RSObjectColours objectColours;
 
     public ColourManager(Gui gui) {
         this.gui = gui;
-        npcColours = new NPCColours();
-        objectColours = new RSObjectColours();
         try {
             bot = new Robot();
         } catch (AWTException e) {
@@ -101,13 +97,6 @@ public class ColourManager {
         
     }
 
-    public NPCColours getNpcColours() {
-        return npcColours;
-    }
-
-    public RSObjectColours getObjectColours() {
-        return objectColours;
-    }
 
     public Color getColour(Point p, Rectangle rect) throws AWTException {
         Robot robot = new Robot();

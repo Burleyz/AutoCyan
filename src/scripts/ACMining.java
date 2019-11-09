@@ -124,9 +124,9 @@ public class ACMining {
     }
 
     private void inits() {
-        ironRock = new RSObject("IRON_ROCK",colourManager);
-        ironOre = new RSObject("IRON_ORE",colourManager);
-        unidentifiedMinerals = new RSObject("UNIDENTIFIED_MINERALS", colourManager);
+        ironRock = new RSObject("IRON_ROCK");
+        ironOre = new RSObject("IRON_ORE");
+        unidentifiedMinerals = new RSObject("UNIDENTIFIED_MINERALS");
 
         rockALocation = new Point(323, 400); //fix these locations
         rockBLocation = new Point(432,325); //fix these locations

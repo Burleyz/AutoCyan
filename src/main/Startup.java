@@ -213,6 +213,7 @@ public class Startup {
                 } else {
                     System.out.println("Account is logged in.");
                     System.out.println("Login completed!\n");
+                    tf=false;
                 }
             }
 
@@ -246,7 +247,7 @@ public class Startup {
         BufferedImage loginScreen3;
         BufferedImage invalidCredentials;
 
-            loginScreen1 = ImageIO.read(new File(".images//login_screen_1.png"));
+            loginScreen1 = ImageIO.read(new File("./images/login_screen_1.png"));
             loginScreen2 = ImageIO.read(new File("./images/login_screen_2.png"));
             loginScreen3 = ImageIO.read(new File("./images/login_screen_3.png"));
             invalidCredentials = ImageIO.read((new File("./images/invalid_credentials.png")));

@@ -1,6 +1,6 @@
 package npc;
 
-import colour.ColourManager;
+import objects.NPCLocations;
 
 import java.awt.*;
 
@@ -8,11 +8,16 @@ public class Npc {
 
     private String name;
     private Color[] colors;
-    private Point location;
+    private Point[] locations;
+    private NPCColours npcColours;
+    private NPCLocations npcLocations;
 
-    public Npc(String name, ColourManager cm) {
+    public Npc(String name) {
         this.name = name;
-        colors = cm.getNpcColours().getNpcs().get(name);
+        npcColours = new NPCColours();
+        npcLocations = new NPCLocations();
+        colors = npcColours.getNpcColours().get(name);
+        locations = npcLocations.getNpcLocations().get(name);
     }
 
     public Color[] getColors() {
@@ -31,11 +36,8 @@ public class Npc {
         this.colors = colors;
     }
 
-    public Point getLocation() {
-        return location;
+    public Point[] getLocations() {
+        return locations;
     }
 
-    public void setLocation(Point location) {
-        this.location = location;
-    }
 }

@@ -35,7 +35,7 @@ public class ACFletching {
         colourManager = new ColourManager(gui);
         player = new Character(gui);
 
-        bank = new RSObject("BANK_BOOTH", colourManager);
+        bank = new RSObject("BANK_CHECK");
 
         gui.setFletching(true);
         gui.setupGui();
@@ -57,9 +57,10 @@ public class ACFletching {
     }
 
     private void fletch(int type) throws AWTException {
-        checkPosition();
+
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(1000,1950));
+        checkPosition();
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
         Time.rest(AntiBan.randomValue(1000,1950));
         clickHandler.clickPoint(bankSlot1.x + AntiBan.randomValue(1,10),bankSlot1.y + AntiBan.randomValue(1,10),gui.getClientWindow());
@@ -70,7 +71,7 @@ public class ACFletching {
         Time.rest(AntiBan.randomValue(1000,1950));
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
         Time.rest(AntiBan.randomValue(1000,1950));
-        checkPosition();
+
         if(type == 1) {
             clickHandler.clickPoint(selectShortbow.x + AntiBan.randomValue(1,10), selectShortbow.y + AntiBan.randomValue(1,10), gui.getClientWindow());
         } else if (type == 2) {
@@ -86,13 +87,13 @@ public class ACFletching {
         bankExit = new Point(652,215);
         selectShortbow = new Point(195,130);
         selectLongbow = new Point(272,126);
-        checkBankPoint = new Point(618,352);
+        checkBankPoint = bank.getLocations()[0];
     }
 
     private void checkPosition() throws AWTException {
 
         System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
-        System.out.println("BANK Colour: " + bank);
+        System.out.println("BANK Colour: " + bank.getColors()[0]);
 
         if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()), bank.getColors()[0],5)) {
 
