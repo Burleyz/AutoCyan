@@ -1,6 +1,8 @@
 package main;
 
 import data.Data;
+import scripts.ACDuster;
+import scripts.ACHerblore;
 import utils.KeyboardKeys;
 import data.LoginPropertiesLoader;
 import gui.Gui;
@@ -59,14 +61,7 @@ public class Startup {
         }
         Time.rest(2000);
 
-
-
         scriptSelector();
-
-
-
-
-
 
     }
 
@@ -107,6 +102,8 @@ public class Startup {
         System.out.println("Which script would you like to run?");
         System.out.println("1: ACMining (PowerMining)");
         System.out.println("2: ACFletching");
+        System.out.println("3: ACDuster");
+        System.out.println("4: ACHerblore");
         int answer = scanner.nextInt();
         Time.rest(1000);
         loadScript(answer);
@@ -136,6 +133,17 @@ public class Startup {
                 System.out.println("2: Longbows");
                 int fletchingType = scanner.nextInt();
                 ACFletching acFletching = new ACFletching(gui, fletchingType);
+                break;
+
+            case 3:
+                System.out.println("Loading ACDuster...");
+                ACDuster acDuster = new ACDuster(gui);
+                break;
+
+            case 4:
+                System.out.println("Loading ACDuster...");
+                ACHerblore acHerblore = new ACHerblore(gui);
+                break;
         }
     }
 

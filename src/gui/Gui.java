@@ -34,15 +34,17 @@ public class Gui extends JFrame {
 
     private boolean mining;
     private boolean fletching;
+    private boolean dusting;
 
     private int ra; //rectangle addition: the size of the green squares on screen
 
-    //for fletching
+    //for fletching/unicorn horns
     private Rectangle bank;
     private Rectangle bankSlot1;
     private Rectangle bankExit;
     private Rectangle selectShortbow;
     private Rectangle selectLongbow;
+
 
 
     public Gui(LoginPropertiesLoader loginPropertiesLoader) {
@@ -154,6 +156,11 @@ public class Gui extends JFrame {
                     g.drawRect(bankSlot1.x + clientWindow.x -5,bankSlot1.y + clientWindow.y - 5,bankSlot1.width,bankSlot1.height);
                     g.drawRect(selectLongbow.x + clientWindow.x -5,selectLongbow.y + clientWindow.y - 5,selectLongbow.width,selectLongbow.height);
                     g.drawRect(selectShortbow.x + clientWindow.x -5,selectShortbow.y + clientWindow.y - 5,selectShortbow.width,selectShortbow.height);
+                } else if(dusting) {
+                    g.setColor(Color.GREEN);
+                    g.drawRect(bank.x + clientWindow.x -5,bank.y + clientWindow.y - 5,bank.width,bank.height);
+                    g.drawRect(bankExit.x + clientWindow.x -5,bankExit.y + clientWindow.y - 5,bankExit.width,bankExit.height);
+                    g.drawRect(bankSlot1.x + clientWindow.x -5,bankSlot1.y + clientWindow.y - 5,bankSlot1.width,bankSlot1.height);
                 }
 
 
@@ -274,6 +281,10 @@ public class Gui extends JFrame {
 
     public void setMiningLocation(String miningLocation) {
         this.miningLocation = miningLocation;
+    }
+
+    public void setDusting(boolean dusting) {
+        this.dusting = dusting;
     }
 }
 
