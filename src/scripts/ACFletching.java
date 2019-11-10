@@ -12,8 +12,6 @@ import java.awt.*;
 
 public class ACFletching {
 
-    //@@@@@@@ SORT ERROR HANDLING
-
     private static Character player;
     private static ColourManager colourManager;
     private static ClickHandler clickHandler;
@@ -24,7 +22,9 @@ public class ACFletching {
     private static Point selectShortbow;
     private static Point selectLongbow;
     private static Point checkBankPoint;
-    private static final int TIME_TO_COMPLETE_INVENT = 50000; //will change this to use checks, but for inital, 50 secongs = 50000 ms
+    private static Point boltLocation;
+    private static final int TIME_TO_COMPLETE_INVENT_BOWS = 50000; //will change this to use checks, but for inital, 50 secongs = 50000 ms
+    private static final int TIME_TO_COMPLETE_BOLTS = 14400;
     private static RSObject bank;
     private int fletchingType; //1 for shortbows, 2 for longbows
     private long startTime;
@@ -40,8 +40,10 @@ public class ACFletching {
 
         bank = new RSObject("BANK_CHECK");
 
-        gui.setFletching(true);
-        gui.setupGui();
+        if(fletchingType == 1 || fletchingType == 2) {
+            gui.setFletching(true);
+            gui.setupGui();
+        }
 
         initPoints();
 
@@ -54,8 +56,69 @@ public class ACFletching {
         }
     }
 
+    private void printAmountMade(int madePerCycle, String making) {
+        fletchCounter = fletchCounter + madePerCycle;
+        long currentTime = System.currentTimeMillis();
+        float seconds = (currentTime - startTime) / 1000F;
+
+        int p1 = (int)seconds % 60;
+        int p2 = (int)seconds / 60;
+        int p3 = p2 % 60;
+        p2 = p2 / 60;
+
+        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " " + making + " Fletched: " + fletchCounter);
+    }
+
+
+    private void selectBowType(Point bowType) throws AWTException {
+        clickHandler.clickPoint(bowType.x + AntiBan.randomValue(1,10), bowType.y + AntiBan.randomValue(1,10), gui.getClientWindow());
+        Time.rest(TIME_TO_COMPLETE_INVENT_BOWS + AntiBan.randomValue(200,3000));
+        clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
+        Time.rest(AntiBan.randomValue(700,1200));
+    }
+
+
     private void fletch(int type) throws AWTException {
 
+        if(type == 1) {
+
+            bank();
+            makeBows();
+            selectBowType(selectShortbow);
+            printAmountMade(27,"Shortbows");
+
+        } else if (type == 2) {
+
+            bank();
+            makeBows();
+            selectBowType(selectLongbow);
+            printAmountMade(27,"Longbows");
+
+        } else if (type == 3) {
+
+            makeBolts();
+            printAmountMade(100,"Bolts");
+        }
+
+    }
+
+    private void makeBolts() throws AWTException {
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(0).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(0).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(50,300));
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(800,1200));
+        clickHandler.clickPoint(boltLocation.x + AntiBan.randomValue(1,10),boltLocation.y + AntiBan.randomValue(1,10), gui.getClientWindow());
+        Time.rest(TIME_TO_COMPLETE_BOLTS);
+    }
+
+    private void makeBows() throws AWTException {
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(0).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(0).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(1000,1950));
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(1000,1950));
+    }
+
+    private void bank() throws AWTException {
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(1000,1950));
         checkPosition();
@@ -65,34 +128,6 @@ public class ACFletching {
         Time.rest(AntiBan.randomValue(1000,1950));
         clickHandler.clickPoint(bankExit.x + AntiBan.randomValue(1,10),bankExit.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(1000,1950));
-        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(0).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(0).y + AntiBan.randomValue(1,10));
-        Time.rest(AntiBan.randomValue(1000,1950));
-        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
-        Time.rest(AntiBan.randomValue(1000,1950));
-
-        if(type == 1) {
-            clickHandler.clickPoint(selectShortbow.x + AntiBan.randomValue(1,10), selectShortbow.y + AntiBan.randomValue(1,10), gui.getClientWindow());
-        } else if (type == 2) {
-            clickHandler.clickPoint(selectLongbow.x + AntiBan.randomValue(1,10), selectLongbow.y + AntiBan.randomValue(1,10), gui.getClientWindow());
-        }
-        Time.rest(TIME_TO_COMPLETE_INVENT + AntiBan.randomValue(200,3000));
-
-        fletchCounter = fletchCounter + 27;
-        //running time calc
-        long currentTime = System.currentTimeMillis();
-        float seconds = (currentTime - startTime) / 1000F;
-
-        int p1 = (int)seconds % 60;
-        int p2 = (int)seconds / 60;
-        int p3 = p2 % 60;
-        p2 = p2 / 60;
-
-
-        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " Logs Fletched: " + fletchCounter);
-
-        clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
-        Time.rest(AntiBan.randomValue(700,1200));
-
     }
 
     private void initPoints() {
@@ -102,12 +137,10 @@ public class ACFletching {
         selectShortbow = new Point(195,130);
         selectLongbow = new Point(272,126);
         checkBankPoint = bank.getLocations()[0];
+        boltLocation = new Point(274,126);
     }
 
     private void checkPosition() throws AWTException {
-
-        //System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
-        //System.out.println("BANK Colour: " + bank.getColors()[0]);
 
         if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()), bank.getColors()[0],5)) {
 

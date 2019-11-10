@@ -12,7 +12,6 @@ import java.awt.*;
 
 public class ACHerblore {
 
-    //@@@@@@@ SORT ERROR HANDLING
 
     private static Character player;
     private static ColourManager colourManager;

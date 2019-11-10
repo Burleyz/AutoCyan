@@ -132,6 +132,7 @@ public class Startup {
                 System.out.println("What are you fletching?");
                 System.out.println("1: Shortbows");
                 System.out.println("2: Longbows");
+                System.out.println("3: Bolts");
                 int fletchingType = scanner.nextInt();
                 ACFletching acFletching = new ACFletching(gui, fletchingType);
                 break;
