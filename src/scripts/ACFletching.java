@@ -26,14 +26,17 @@ public class ACFletching {
     private static Point checkBankPoint;
     private static final int TIME_TO_COMPLETE_INVENT = 50000; //will change this to use checks, but for inital, 50 secongs = 50000 ms
     private static RSObject bank;
-    private int errorCounter;
     private int fletchingType; //1 for shortbows, 2 for longbows
+    private long startTime;
+    private int fletchCounter;
 
     public ACFletching(Gui gui, int fletchingType) {
         this.gui = gui;
         clickHandler = new ClickHandler();
         colourManager = new ColourManager(gui);
         player = new Character(gui);
+        startTime = System.currentTimeMillis();
+        fletchCounter = 0;
 
         bank = new RSObject("BANK_CHECK");
 
@@ -43,16 +46,11 @@ public class ACFletching {
         initPoints();
 
         while(true) {
-
-
-
             try {
                 fletch(fletchingType);
             } catch (AWTException e) {
                 e.printStackTrace();
             }
-
-
         }
     }
 
@@ -79,6 +77,22 @@ public class ACFletching {
         }
         Time.rest(TIME_TO_COMPLETE_INVENT + AntiBan.randomValue(200,3000));
 
+        fletchCounter = fletchCounter + 27;
+        //running time calc
+        long currentTime = System.currentTimeMillis();
+        float seconds = (currentTime - startTime) / 1000F;
+
+        int p1 = (int)seconds % 60;
+        int p2 = (int)seconds / 60;
+        int p3 = p2 % 60;
+        p2 = p2 / 60;
+
+
+        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " Logs Fletched: " + fletchCounter);
+
+        clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
+        Time.rest(AntiBan.randomValue(700,1200));
+
     }
 
     private void initPoints() {
@@ -92,13 +106,12 @@ public class ACFletching {
 
     private void checkPosition() throws AWTException {
 
-        System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
-        System.out.println("BANK Colour: " + bank.getColors()[0]);
+        //System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint,gui.getClientWindow()));
+        //System.out.println("BANK Colour: " + bank.getColors()[0]);
 
         if(colourManager.similarColours(colourManager.getColour(checkBankPoint,gui.getClientWindow()), bank.getColors()[0],5)) {
 
         } else {
-            errorCounter++;
             Time.rest(1000);
             clickHandler.clickPoint(bankExit.x,bankExit.y,gui.getClientWindow());
             System.out.println("ERROR - EXITING");

@@ -24,6 +24,7 @@ public class ACDuster {
     private static Point checkBankPoint;
     private static RSObject bank;
     private int dustCounter;
+    private long startTime;
 
     public ACDuster(Gui gui) {
         this.gui = gui;
@@ -32,6 +33,7 @@ public class ACDuster {
         player = new Character(gui);
         bank = new RSObject("BANK_CHECK");
         dustCounter = 0;
+        startTime = System.currentTimeMillis();
 
         gui.setDusting(true);
         gui.setupGui();
@@ -40,17 +42,16 @@ public class ACDuster {
 
         while(true) {
 
-
-
             try {
                 dust();
             } catch (AWTException e) {
                 e.printStackTrace();
             }
-
-
         }
+
     }
+
+
 
     private void dust() throws AWTException {
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
@@ -74,7 +75,18 @@ public class ACDuster {
         }
 
         dustCounter = dustCounter + 27;
-        System.out.println("Dust created so far: " + dustCounter);
+
+        //running time calc
+        long currentTime = System.currentTimeMillis();
+        float seconds = (currentTime - startTime) / 1000F;
+
+        int p1 = (int)seconds % 60;
+        int p2 = (int)seconds / 60;
+        int p3 = p2 % 60;
+        p2 = p2 / 60;
+
+
+        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " Dust Created: " + dustCounter);
 
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10),gui.getClientWindow());
         Time.rest(AntiBan.randomValue(700,1200));
@@ -87,6 +99,8 @@ public class ACDuster {
         bankExit = new Point(652,215);
         checkBankPoint = bank.getLocations()[0];
     }
+
+
 
     private void checkPosition() throws AWTException {
 

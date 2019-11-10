@@ -8,7 +8,17 @@
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AutoCyan_jar/AutoCyan.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/character/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACDuster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACDuster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACFletching.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/scripts/ACFletching.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/ACDuster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACDuster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/ACFletching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACFletching.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/ACHerblore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACHerblore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/ACMining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACMining.java" afterDir="false" />
     </list>
@@ -24,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3230">
-              <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
+            <state relative-caret-position="901">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/LoginPropertiesLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="374">
               <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -60,16 +70,16 @@
         <entry file="file://$PROJECT_DIR$/src/data/Data.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/ACDuster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+            <state relative-caret-position="595">
+              <caret line="35" column="47" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+            <state relative-caret-position="561">
+              <caret line="90" column="110" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="90" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/ACHerblore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="442">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scripts/ACMining.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="408">
+              <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,36 +186,36 @@
         <option value="$PROJECT_DIR$/src/character/Character.java" />
         <option value="$PROJECT_DIR$/src/data/LoginPropertiesLoader.java" />
         <option value="$PROJECT_DIR$/src/mouse/ClickHandler.java" />
-        <option value="$PROJECT_DIR$/src/character/Inventory.java" />
         <option value="$PROJECT_DIR$/src/utils/SaveImageFromUrl.java" />
         <option value="$PROJECT_DIR$/src/world/WorldMapHandler.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/data/KeyboardKeys.java" />
         <option value="$PROJECT_DIR$/src/utils/KeyboardKeys.java" />
-        <option value="$PROJECT_DIR$/src/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/colour/RSObjectColours.java" />
         <option value="$PROJECT_DIR$/src/colour/ColourManager.java" />
         <option value="$PROJECT_DIR$/src/objects/RSObject.java" />
-        <option value="$PROJECT_DIR$/src/scripts/ACFletching.java" />
         <option value="$PROJECT_DIR$/src/objects/RSObjectColours.java" />
         <option value="$PROJECT_DIR$/src/objects/RSObjectLocations.java" />
         <option value="$PROJECT_DIR$/src/npc/NPCLocations.java" />
         <option value="$PROJECT_DIR$/src/npc/NPCColours.java" />
         <option value="$PROJECT_DIR$/src/npc/Npc.java" />
-        <option value="$PROJECT_DIR$/src/main/Startup.java" />
         <option value="$PROJECT_DIR$/autocyan.properties" />
         <option value="$PROJECT_DIR$/src/data/Data.java" />
+        <option value="$PROJECT_DIR$/src/scripts/ACDuster.java" />
+        <option value="$PROJECT_DIR$/src/main/Startup.java" />
+        <option value="$PROJECT_DIR$/src/scripts/ACFletching.java" />
+        <option value="$PROJECT_DIR$/src/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/character/Inventory.java" />
         <option value="$PROJECT_DIR$/src/scripts/ACHerblore.java" />
         <option value="$PROJECT_DIR$/src/scripts/ACMining.java" />
-        <option value="$PROJECT_DIR$/src/scripts/ACDuster.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-60" />
+    <option name="y" value="95" />
+    <option name="width" value="905" />
+    <option name="height" value="917" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -270,6 +280,12 @@
               <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoCyan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoCyan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,12 +328,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573304312558" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573380230591" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OSRS Botting/AutoCyan/Release/AutoCyan_v1.0" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -543,10 +559,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -555,12 +570,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.20801733" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.35211268" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.10292524" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" weight="0.40195015" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
@@ -807,16 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/character/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/AutoCyan_jar/autocyan.properties" />
     <entry file="file://$PROJECT_DIR$/src/gui/GUI_old.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -832,17 +837,6 @@
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4386">
-          <caret line="288" column="1" selection-start-line="288" selection-start-column="1" selection-end-line="288" selection-end-column="1" />
-          <folding>
-            <element signature="e#10933#10934#0" expanded="true" />
-            <element signature="e#10971#10972#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
+        <state relative-caret-position="901">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -951,7 +945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/LoginPropertiesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="374">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -964,14 +958,41 @@
     <entry file="file://$PROJECT_DIR$/src/data/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/ACDuster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/character/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        <state relative-caret-position="561">
+          <caret line="90" column="110" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="90" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -980,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/ACHerblore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="442">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -990,18 +1011,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/ACMining.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/ACDuster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+        <state relative-caret-position="408">
+          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

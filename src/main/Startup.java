@@ -44,6 +44,7 @@ public class Startup {
 
 
     public static void main(String[] args) {
+
         System.out.println("Starting AutoCyan - Version: " + Data.getVERSION());
         System.out.println("Getting OSRS instance...");
         initClasses();

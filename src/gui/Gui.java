@@ -66,17 +66,17 @@ public class Gui extends JFrame {
         //inventoryTopLeft = new Point((int)(clientWindowTopLeft.x*2.67),(int)(clientWindowTopLeft.y*3.16)); //figure out how to auto gen invent coords
 
 
-        System.out.println("InventTopLeft: " + inventoryTopLeft);
-        System.out.println("InventBottomRight: " + inventoryBottomRight);
-        System.out.println("ClientTopLeft: " + clientWindowTopLeft);
-        System.out.println("ClientBottomRight: " + clientWindowBottomRight);
+        //System.out.println("InventTopLeft: " + inventoryTopLeft);
+        //System.out.println("InventBottomRight: " + inventoryBottomRight);
+        //System.out.println("ClientTopLeft: " + clientWindowTopLeft);
+        //System.out.println("ClientBottomRight: " + clientWindowBottomRight);
 
 
 
 
 
-        System.out.println("ClientWidth: " + clientWindow.width);
-        System.out.println("ClientHeight: " + clientWindow.height);
+        //System.out.println("ClientWidth: " + clientWindow.width);
+        //System.out.println("ClientHeight: " + clientWindow.height);
 
         loginScreenCheckRectangle = new Rectangle();
         loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
