@@ -13,3 +13,7 @@ RuneScape Mobile Bot
 **Discord**: https://discord.gg/rDntamv
 
 All scripts have built in Anti-Ban and error detection
+
+**Updates to come**
+- Web connection to check if clients are running
+- Additional scripts
