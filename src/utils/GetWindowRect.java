@@ -1,6 +1,5 @@
 package utils;
 
-import java.util.Arrays;
 import com.sun.jna.*;
 import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.win32.*;
