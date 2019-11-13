@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/utils/GetWindowRect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GetWindowRect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/KeyboardKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/KeyboardKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/ACFletching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/ACFletching.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +22,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+            <state relative-caret-position="296">
+              <caret line="129" column="49" lean-forward="true" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="120" column="121" lean-forward="true" selection-start-line="120" selection-start-column="121" selection-end-line="120" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/GetWindowRect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1462#1463#0" expanded="true" />
@@ -57,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/KeyboardKeys.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -70,19 +82,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/character/Character.java">
+        <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/character/Inventory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+            <state relative-caret-position="323">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,10 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/character/Prayer.java">
+        <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -215,16 +218,16 @@
         <option value="$PROJECT_DIR$/src/scripts/ACDuster.java" />
         <option value="$PROJECT_DIR$/src/login/LoginPropertiesLoader.java" />
         <option value="$PROJECT_DIR$/src/login/LoginHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/Startup.java" />
-        <option value="$PROJECT_DIR$/src/scripts/ACFletching.java" />
         <option value="$PROJECT_DIR$/src/utils/GetWindowRect.java" />
         <option value="$PROJECT_DIR$/src/utils/KeyboardKeys.java" />
+        <option value="$PROJECT_DIR$/src/main/Startup.java" />
+        <option value="$PROJECT_DIR$/src/scripts/ACFletching.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
-    <option name="y" value="36" />
+    <option name="x" value="-4" />
+    <option name="y" value="23" />
     <option name="width" value="905" />
     <option name="height" value="917" />
   </component>
@@ -349,8 +352,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573676217743" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OSRS Botting/AutoCyan/Release/AutoCyan_v1.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573684616075" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OSRS Botting/AutoCyan/Release/obfuscated/AutoCyan" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -579,7 +582,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -588,12 +591,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.4225352" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.1419285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.22210184" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.3877551" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" weight="0.22210184" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
@@ -727,13 +730,6 @@
     <entry file="file://$PROJECT_DIR$/images/AutoCyanGuide.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/Script.java" />
     <entry file="file://$PROJECT_DIR$/src/scripts/CyanKBD.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Script.java" />
@@ -743,16 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,16 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/antiban/AntiBan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -973,16 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mouse/ClickHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -993,10 +959,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/GetWindowRect.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/KeyboardKeys.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/SaveImageFromUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/GetWindowRect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1462#1463#0" expanded="true" />
@@ -1005,10 +998,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/KeyboardKeys.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="296">
+          <caret line="129" column="49" lean-forward="true" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/ACFletching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="120" column="121" lean-forward="true" selection-start-line="120" selection-start-column="121" selection-end-line="120" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

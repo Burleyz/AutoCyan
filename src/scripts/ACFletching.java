@@ -96,13 +96,24 @@ public class ACFletching {
 
         } else if (type == 3) {
 
-            makeBolts();
+            addBoltTips();
             printAmountMade(100,"Bolts");
+
+        } else if (type == 4) {
+            makeBolts();
+            printAmountMade(10,"Bolts");
         }
 
     }
 
     private void makeBolts() throws AWTException {
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(0).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(0).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(50,300));
+        clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(4).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(4).y + AntiBan.randomValue(1,10));
+        Time.rest(AntiBan.randomValue(50,300));
+    }
+
+    private void addBoltTips() throws AWTException {
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(0).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(0).y + AntiBan.randomValue(1,10));
         Time.rest(AntiBan.randomValue(50,300));
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
