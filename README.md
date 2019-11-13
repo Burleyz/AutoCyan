@@ -1,7 +1,7 @@
-# AutoCyan
-RuneScape Mobile Bot
+# ![AutoCyanLogo](/images/logo.PNG)
+_**Commplete RuneScape Mobile Botting Solution**_
 
-![AutoCyanLogo](https://imgur.com/p4Dd91s)
+
 
 ## Version
 - **Release:** Beta: V1.0
