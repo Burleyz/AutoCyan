@@ -1,5 +1,5 @@
 # ![AutoCyanLogo](/images/logo.PNG)
-_**Commplete RuneScape Mobile Botting Solution**_
+_**Complete RuneScape Mobile Botting Solution**_
 
 
 
