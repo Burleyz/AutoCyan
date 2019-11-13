@@ -1,9 +1,11 @@
 # AutoCyan
 RuneScape Mobile Bot
 
+![AutoCyanLogo](https://imgur.com/p4Dd91s)
+
 ## Version
-- Release: Beta: V1.0
-- Development: Beta V1.1
+- **Release:** Beta: V1.0
+- **Development:** Beta V1.1
 
 ## Scripts
 - ACMining: Iron powermining scrip that supports Varrock East and the Mining Guild
