@@ -6,7 +6,7 @@ RuneScape Mobile Bot
 
 **Scripts**
 - ACMining: Iron powermining scrip that supports Varrock East and the Mining Guild
-- ACFletching: Makes shortbows(u) or Longbows(u)
+- ACFletching: Makes shortbows(u), Longbows(u) and bolts (combines bolts and bolt tips)
 - ACDuster: Uses a pestle and mortar on many items to turn them into dust
 - ACHerblore: Cleans herbs (8k per hour)
 
