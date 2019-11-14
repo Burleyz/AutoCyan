@@ -1,7 +1,7 @@
 package data;
 
 public class Data {
-    private final static String VERSION = "Release Beta: 1.0";
+    private final static String VERSION = "Beta: 1.1";
 
     public Data() {
 
