@@ -1,16 +1,16 @@
 package character;
 
-import gui.Gui;
+import display.Display;
 
 public class Character {
 
     private Inventory inventory;
     private boolean loggedIn;
 
-    public Character(Gui gui) {
+    public Character(Display display) {
 
         inventory = new Inventory();
-        inventory.generateInventSlots(gui);
+        inventory.generateInventSlots(display);
         inventory.generateInventSlotPoints();
 
     }

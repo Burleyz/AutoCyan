@@ -1,4 +1,4 @@
-package gui;
+package display;
 
 import data.Data;
 import data.LoginPropertiesLoader;
@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Gui extends JFrame {
+public class Display extends JFrame {
 
     private Window w;
     private Point clientWindowTopLeft;
@@ -47,9 +47,8 @@ public class Gui extends JFrame {
 
 
 
-    public Gui(LoginPropertiesLoader loginPropertiesLoader) {
+    public Display(LoginPropertiesLoader loginPropertiesLoader) {
         this.loginPropertiesLoader = loginPropertiesLoader;
-        mining = false;
         ra = 20;
     }
 
@@ -63,18 +62,10 @@ public class Gui extends JFrame {
         clientWindow = new Rectangle();
         clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
-        //inventoryTopLeft = new Point((int)(clientWindowTopLeft.x*2.67),(int)(clientWindowTopLeft.y*3.16)); //figure out how to auto gen invent coords
-
-
         //System.out.println("InventTopLeft: " + inventoryTopLeft);
         //System.out.println("InventBottomRight: " + inventoryBottomRight);
         //System.out.println("ClientTopLeft: " + clientWindowTopLeft);
         //System.out.println("ClientBottomRight: " + clientWindowBottomRight);
-
-
-
-
-
         //System.out.println("ClientWidth: " + clientWindow.width);
         //System.out.println("ClientHeight: " + clientWindow.height);
 
@@ -84,9 +75,6 @@ public class Gui extends JFrame {
         //sets inventory bounds
         inventory = new Rectangle();
         inventory.setFrameFromDiagonal(inventoryTopLeft, inventoryBottomRight);
-
-
-
 
         //mining
         varrockEastRockA = new Rectangle();
@@ -100,8 +88,6 @@ public class Gui extends JFrame {
         miningGuildRockA.setFrameFromDiagonal(new Point(339, 438),new Point(339+ra, 438+ra));
         miningGuildRockB.setFrameFromDiagonal(new Point(430,333),new Point(430+ra,333+ra));
         miningGuildRockC.setFrameFromDiagonal(new Point(620,374),new Point(620+ra,374+ra));
-
-
 
         //fletching
         bank = new Rectangle();
@@ -125,6 +111,8 @@ public class Gui extends JFrame {
             @Override
             public void paint(Graphics g)
             {
+
+                System.out.println("Painting!");
                 final Font font = getFont().deriveFont(48f);
                 g.setFont(font);
                 g.setColor(Color.RED);
@@ -285,6 +273,15 @@ public class Gui extends JFrame {
 
     public void setDusting(boolean dusting) {
         this.dusting = dusting;
+    }
+
+    public void resetDisplay() { ///FIX THIS TO CLEAR GUI
+        mining = false;
+        fletching = false;
+        dusting = false;
+        setupGui();
+        repaint();
+        System.out.println("DISPLAY RESET!");
     }
 }
 

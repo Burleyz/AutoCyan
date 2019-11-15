@@ -1,6 +1,6 @@
 package colour;
 
-import gui.Gui;
+import display.Display;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -9,10 +9,10 @@ import java.util.ArrayList;
 public class ColourManager {
     
     private Robot bot;
-    private Gui gui;
+    private Display display;
 
-    public ColourManager(Gui gui) {
-        this.gui = gui;
+    public ColourManager(Display display) {
+        this.display = display;
         try {
             bot = new Robot();
         } catch (AWTException e) {
@@ -22,7 +22,7 @@ public class ColourManager {
 
     public ArrayList<Point> findColour(Color color) { //find colour in coordinates and returns ArrayList of matches
 
-        Rectangle capture = gui.getPlayScreen();
+        Rectangle capture = display.getPlayScreen();
         BufferedImage bufferedImage = bot.createScreenCapture(capture);
         ArrayList<Point> pointsFound = new ArrayList<>();
 

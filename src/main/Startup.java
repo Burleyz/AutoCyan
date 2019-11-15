@@ -1,11 +1,12 @@
 package main;
 
+import gui.AutoCyanForm;
 import data.Data;
+import display.Display;
 import scripts.ACDuster;
 import scripts.ACHerblore;
 import utils.KeyboardKeys;
 import data.LoginPropertiesLoader;
-import gui.Gui;
 import mouse.ClickHandler;
 import scripts.ACFletching;
 import scripts.ACMining;
@@ -24,13 +25,19 @@ import java.util.Scanner;
 public class Startup {
 
     private static Scanner scanner;
-    private static Gui gui;
+    private static Display display;
     private static int clientRectangleTopX;
     private static int clientRectangleTopY;
     private static int clientRectangleBottomX;
     private static int clientRectangleBottomY;
     private static LoginPropertiesLoader loginPropertiesLoader;
     private static ClickHandler clickHandler;
+    private static AutoCyanForm gui;
+    private static boolean cyanAuthenticated;
+    private static ACFletching acFletching;
+    private static ACMining acMining;
+    private static ACDuster acDuster;
+    private static ACHerblore acHerblore;
 
     /*
     Please note! When starting client, please select a free world manually if using a f2p account!
@@ -44,12 +51,23 @@ public class Startup {
 
 
     public static void main(String[] args) {
+        //launches gui
+        cyanAuthenticated = false;
+
+        gui = new AutoCyanForm();
+        gui.setVersionLabel(Data.getVERSION());
+        gui.setVisible(true);
+
+        while(!cyanAuthenticated) {
+            Time.rest(1000);
+        }
 
         System.out.println("Starting AutoCyan - Version: " + Data.getVERSION());
         System.out.println("Getting OSRS instance...");
         initClasses();
         getOSRSWindow();
-        launchGui();
+        grabClient();
+
 
 
         Time.rest(2000);
@@ -62,7 +80,7 @@ public class Startup {
         }
         Time.rest(2000);
 
-        scriptSelector();
+        //scriptSelector();
 
     }
 
@@ -107,26 +125,29 @@ public class Startup {
         System.out.println("4: ACHerblore");
         int answer = scanner.nextInt();
         Time.rest(1000);
-        loadScript(answer);
+        //loadScript(answer);
 
 
     }
 
-    private static void loadScript(int script) {
+    public static void loadScript(int script, int selection) {
         switch (script) {
             case 1:
                 System.out.println("Loading ACMining...");
+                /*
                 scanner = new Scanner(System.in);
                 System.out.println("\n");
                 System.out.println("Where are you mining?");
                 System.out.println("1: Varrock East");
                 System.out.println("2: Mining Guild");
                 int answer = scanner.nextInt();
-                ACMining acMining = new ACMining(gui, answer); //passes gui to have access to the playscreen data
+                */
+                acMining = new ACMining(display, selection); //passes display to have access to the playscreen data
                 break;
 
             case 2:
                 System.out.println("Loading ACFletching...");
+                /*
                 scanner = new Scanner(System.in);
                 System.out.println("\n");
                 System.out.println("What are you fletching?");
@@ -135,29 +156,30 @@ public class Startup {
                 System.out.println("3: Adding Bolt Tips");
                 System.out.println("4: Making Bolts");
                 int fletchingType = scanner.nextInt();
-                ACFletching acFletching = new ACFletching(gui, fletchingType);
+                */
+                acFletching = new ACFletching(display, selection);
                 break;
 
             case 3:
                 System.out.println("Loading ACDuster...");
-                ACDuster acDuster = new ACDuster(gui);
+                acDuster = new ACDuster(display);
                 break;
 
             case 4:
                 System.out.println("Loading ACDuster...");
-                ACHerblore acHerblore = new ACHerblore(gui);
+                acHerblore = new ACHerblore(display);
                 break;
         }
     }
 
 
 
-    private static void launchGui() {
+    private static void grabClient() {
         System.out.println("Latching onto instance!");
-        gui = new Gui(loginPropertiesLoader);
-        gui.setClientWindowTopLeft(new Point(clientRectangleTopX, clientRectangleTopY));
-        gui.setClientWindowBottomRight(new Point(clientRectangleBottomX, clientRectangleBottomY));
-        gui.setupGui();
+        display = new Display(loginPropertiesLoader);
+        display.setClientWindowTopLeft(new Point(clientRectangleTopX, clientRectangleTopY));
+        display.setClientWindowBottomRight(new Point(clientRectangleBottomX, clientRectangleBottomY));
+        display.setupGui();
     }
 
     private static void login(String clientType) throws AWTException, IOException {
@@ -181,7 +203,7 @@ public class Startup {
             while(tf) {
 
                 if (checkLoginScreen(1)) {
-                    clickHandler.clickPoint(458, 318, gui.getClientWindow());
+                    clickHandler.clickPoint(458, 318, display.getClientWindow());
                     robot.delay(2000); //waits 2 seconds
 
                 } else if (checkLoginScreen(2)) { //checking which login screen, if on correct screen (screen 2) then do type chars
@@ -206,7 +228,7 @@ public class Startup {
 
 
                 } else if (checkLoginScreen(3)) {
-                    clickHandler.clickPoint(393, 380, gui.getClientWindow());
+                    clickHandler.clickPoint(393, 380, display.getClientWindow());
 
                 } else if (checkLoginScreen(4)) {
                     System.out.println("Credentials are incorrect in autocyan.properties!");
@@ -227,7 +249,7 @@ public class Startup {
             /*
             NOT WORKING, CLICK WONT REGISTER - Login manually
 
-            Point p = clickHandler.getCenter(gui.getClientWindow());
+            Point p = clickHandler.getCenter(display.getClientWindow());
             clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
             Time.rest(2000);
             clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
@@ -244,7 +266,7 @@ public class Startup {
     }
 
     private static boolean checkLoginScreen(int screen) throws IOException {
-        BufferedImage loginCapture = gui.captureLoginRectangle();
+        BufferedImage loginCapture = display.captureLoginRectangle();
         BufferedImage loginScreen1;
         BufferedImage loginScreen2;
         BufferedImage loginScreen3;
@@ -300,8 +322,27 @@ public class Startup {
     }
 
 
-    public static Gui getGui() {
-        return gui;
+    public static Display getDisplay() {
+        return display;
     }
 
+    public static void setCyanAuthenticated(boolean cyanAuthenticated) {
+        Startup.cyanAuthenticated = cyanAuthenticated;
+    }
+
+    public static ACFletching getAcFletching() {
+        return acFletching;
+    }
+
+    public static ACMining getAcMining() {
+        return acMining;
+    }
+
+    public static ACDuster getAcDuster() {
+        return acDuster;
+    }
+
+    public static ACHerblore getAcHerblore() {
+        return acHerblore;
+    }
 }

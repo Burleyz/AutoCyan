@@ -1,6 +1,6 @@
 package character;
 
-import gui.Gui;
+import display.Display;
 import mouse.ClickHandler;
 
 import java.awt.*;
@@ -24,10 +24,10 @@ public class Inventory {
         }
     }
 
-    public void generateInventSlots(Gui gui) { //disgusting code, need to make this more efficient
-        Point inventInnerTopLeft = new Point(gui.getInventoryTopLeft()); //gets starting position
+    public void generateInventSlots(Display display) { //disgusting code, need to make this more efficient
+        Point inventInnerTopLeft = new Point(display.getInventoryTopLeft()); //gets starting position
 
-        Rectangle invent = gui.getInventory(); //get rect as invent outline
+        Rectangle invent = display.getInventory(); //get rect as invent outline
 
 
         float width = (float)invent.width;

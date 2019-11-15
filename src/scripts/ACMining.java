@@ -7,7 +7,7 @@ This script will mine ore using OSRS Mobile
 import antiban.AntiBan;
 import character.Character;
 import colour.ColourManager;
-import gui.Gui;
+import display.Display;
 import mouse.ClickHandler;
 import objects.RSObject;
 import utils.Time;
@@ -24,7 +24,7 @@ public class ACMining {
     private static Character player;
     private static ColourManager colourManager;
     private static ClickHandler clickHandler;
-    private static Gui gui;
+    private static Display display;
     private static Point rockALocation;
     private static Point rockBLocation;
 
@@ -38,13 +38,16 @@ public class ACMining {
     private int errorCounter;
     private static String miningLocation;
 
+    private boolean running; //added to enable use of stop button
 
 
-    public ACMining(Gui gui, int location) {
-        this.gui = gui;
+
+    public ACMining(Display display, int location) {
+        running = true;
+        this.display = display;
         clickHandler = new ClickHandler();
-        colourManager = new ColourManager(gui);
-        player = new Character(gui);
+        colourManager = new ColourManager(display);
+        player = new Character(display);
         oreLocations = new ArrayList<>();
         inits();
         errorCounter = 0;
@@ -56,12 +59,12 @@ public class ACMining {
             miningLocation = "mining_guild";
         }
 
-        gui.setMining(true);
-        gui.setMiningLocation(miningLocation);
-        gui.setupGui();
+        display.setMining(true);
+        display.setMiningLocation(miningLocation);
+        display.setupGui();
 
 
-        while (true) {
+        while (running) {
 
             if(errorCounter > 150) {
                 System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
@@ -159,7 +162,7 @@ public class ACMining {
 
     public Color getColourAtPoint(Point p) {
         try {
-            return colourManager.getColour(p,gui.getClientWindow());
+            return colourManager.getColour(p, display.getClientWindow());
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -180,7 +183,7 @@ public class ACMining {
 
     private void mineRock(Point point) {
         try {
-            clickHandler.clickPoint(point.x + AntiBan.randomValue(1,5),point.y + AntiBan.randomValue(1,5),gui.getClientWindow());
+            clickHandler.clickPoint(point.x + AntiBan.randomValue(1,5),point.y + AntiBan.randomValue(1,5), display.getClientWindow());
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -209,9 +212,13 @@ public class ACMining {
     private void logout() throws AWTException {
         Point logoutButton = new Point(927,520);
         Point logoutButtonConfirm = new Point(793,497);
-        clickHandler.clickPoint(logoutButton.x,logoutButton.y,gui.getClientWindow());
+        clickHandler.clickPoint(logoutButton.x,logoutButton.y, display.getClientWindow());
         Time.rest(200);
-        clickHandler.clickPoint(logoutButtonConfirm.x, logoutButtonConfirm.y,gui.getClientWindow());
+        clickHandler.clickPoint(logoutButtonConfirm.x, logoutButtonConfirm.y, display.getClientWindow());
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
     }
 
 
