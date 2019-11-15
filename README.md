@@ -21,7 +21,7 @@ All scripts have built in Anti-Ban and error detection
 ## Updates to come
 - Web connection to check if clients are running
 - Additional scripts
-- GUI with pause, stop and start support
+- ~~GUI with pause, stop and start support~~
 - Licencing for Release version
 - Automatic updates
 
