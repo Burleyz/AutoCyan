@@ -30,3 +30,4 @@ All scripts have built in Anti-Ban and error detection
  - Initial Release
 ### Beta V1.1
 - Fletching script can now add feathers to bolts
+- GUI Implemented
