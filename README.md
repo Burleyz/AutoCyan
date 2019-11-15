@@ -13,10 +13,10 @@ _**Complete RuneScape Mobile Botting Solution**_
 - ACDuster: Uses a pestle and mortar on many items to turn them into dust
 - ACHerblore: Cleans herbs (8k per hour)
 
+All scripts have built in Anti-Ban and error detection
+
 ## Discord 
 - https://discord.gg/rDntamv
-
-All scripts have built in Anti-Ban and error detection
 
 ## Updates to come
 - Web connection to check if clients are running
