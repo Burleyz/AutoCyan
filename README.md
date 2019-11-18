@@ -32,3 +32,6 @@ All scripts have built in Anti-Ban and error detection
 - Fletching script can now add feathers to bolts
 - GUI Implemented
 - Licence handling added
+
+## Bugs
+- Issues with licence authentication, needs rework
