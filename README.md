@@ -24,6 +24,7 @@ All scripts have built in Anti-Ban and error detection
 - ~~GUI with pause, stop and start support~~
 - ~~Licencing for Release version~~
 - Automatic updates
+- Stop shortcut needs to be added
 
 ## Change log
 ### Beta V1.0
@@ -35,3 +36,4 @@ All scripts have built in Anti-Ban and error detection
 
 ## Bugs
 - Issues with licence authentication, needs rework
+
