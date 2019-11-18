@@ -22,7 +22,7 @@ All scripts have built in Anti-Ban and error detection
 - Web connection to check if clients are running
 - Additional scripts
 - ~~GUI with pause, stop and start support~~
-- Licencing for Release version
+- ~~Licencing for Release version~~
 - Automatic updates
 
 ## Change log
@@ -31,3 +31,4 @@ All scripts have built in Anti-Ban and error detection
 ### Beta V1.1
 - Fletching script can now add feathers to bolts
 - GUI Implemented
+- Licence handling added
