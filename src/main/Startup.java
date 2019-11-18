@@ -17,8 +17,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -38,6 +37,7 @@ public class Startup {
     private static ACMining acMining;
     private static ACDuster acDuster;
     private static ACHerblore acHerblore;
+    private static Data data;
 
     /*
     Please note! When starting client, please select a free world manually if using a f2p account!
@@ -47,10 +47,29 @@ public class Startup {
     private static void initClasses() {
         loginPropertiesLoader = new LoginPropertiesLoader();
         clickHandler = new ClickHandler();
+        data = new Data();
     }
 
+    private static void checkIfLicenceExists() throws IOException {
+        String fileName = "./licence.txt";
+        File file = new File(fileName);
+        FileReader fr = new FileReader(file);
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while((line = br.readLine()) != null){
+            //process the line
+            //System.out.println(line);
+            gui.getAuthenticationField().setText(line);
+
+        }
+
+        fr.close();
+        br.close();
+
+    }
 
     public static void main(String[] args) {
+
         //launches gui
         cyanAuthenticated = false;
 
@@ -58,9 +77,15 @@ public class Startup {
         gui.setVersionLabel(Data.getVERSION());
         gui.setVisible(true);
 
+        try {
+            checkIfLicenceExists();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         while(!cyanAuthenticated) {
             Time.rest(1000);
         }
+
 
         System.out.println("Starting AutoCyan - Version: " + Data.getVERSION());
         System.out.println("Getting OSRS instance...");
@@ -344,5 +369,9 @@ public class Startup {
 
     public static ACHerblore getAcHerblore() {
         return acHerblore;
+    }
+
+    public static Data getData() {
+        return data;
     }
 }

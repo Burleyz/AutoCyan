@@ -8,6 +8,9 @@ package gui;
 
 import main.Startup;
 
+import javax.swing.*;
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Arrays;
 
@@ -17,10 +20,10 @@ import java.util.Arrays;
  */
 public class AutoCyanForm extends javax.swing.JFrame {
 
-    private static final String[] LICENCE_KEYS = new String[] { "TESTKEY1234", "CYANKEY1" };
     private boolean authenticated;
     private Thread scriptThread;
     private Startup startup;
+    private boolean scriptLive;
 
     /**
      * Creates new form AutoCyanForm
@@ -28,6 +31,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
     public AutoCyanForm() {
         initComponents();
         startup = new Startup();
+        scriptLive = false;
     }
 
     /**
@@ -207,6 +211,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
         scriptThread = new Thread() {
             public void run() {
                 System.out.println("Thread Running");
+                scriptLive = true;
                 startup.loadScript(script, selection);
             }
         };
@@ -221,7 +226,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
 
 
-        if(scriptThread != null) {
+        if(scriptLive) {
             scriptThread.resume();
             System.out.println("Resuming script!");
             statusLabel.setText("Running...");
@@ -321,23 +326,30 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     private void authenticateButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        List<String> list = Arrays.asList(LICENCE_KEYS);
-        if(list.contains(authenticationField.getText())) {
-            authenticated = true;
-            System.out.println("Licence key (" + authenticationField.getText() + ") accepted - Authenticated!");
-            authenticatedLabel.setText("Authenticated");
-            startup.setCyanAuthenticated(true);
 
-        } else {
-            authenticated = false;
-            System.out.println("Licence key (" + authenticationField.getText() + ") is not valid!");
-            authenticatedLabel.setText("No authentication");
+        try {
+            if(startup.getData().checkLicence(authenticationField.getText())) {
+                authenticated = true;
+                System.out.println("Licence key (" + authenticationField.getText() + ") accepted - Authenticated!");
+                authenticatedLabel.setText("Authenticated");
+                startup.setCyanAuthenticated(true);
+
+            } else {
+                authenticated = false;
+                System.out.println("Licence key (" + authenticationField.getText() + ") is not valid!");
+                authenticatedLabel.setText("No authentication");
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
+        scriptLive = false;
         scriptThread.stop();
         startup.getDisplay().resetDisplay();
         System.out.println("Script stopped and Display reset!");
@@ -409,5 +421,9 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     public void setVersionLabel(String versionString) {
         this.version.setText(versionString);
+    }
+
+    public JTextField getAuthenticationField() {
+        return authenticationField;
     }
 }
