@@ -35,7 +35,7 @@ public class Data {
         String[] licences = read.split("\\r?\\n");
 
         for (String a : licences) {
-            System.out.println(a);
+            //System.out.println(a);
             if (a.equals(hash)) {
                 System.out.println("Licence is correct!");
                 ACLicence = licence;

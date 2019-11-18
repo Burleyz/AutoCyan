@@ -8,23 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12f3a191-34ff-4436-a63c-d230277bd1aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/data/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/data/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/gui/AutoCyanForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoCyan/main/Startup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AutoCyanForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AutoCyanForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Startup.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+            <state relative-caret-position="418">
+              <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#11219#11220#0" expanded="true" />
@@ -267,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2230" />
     <option name="y" value="78" />
     <option name="width" value="905" />
@@ -363,7 +346,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574108616663" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574108764414" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OSRS Botting/AutoCyan/Release/obfuscated/AutoCyan" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -590,10 +573,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8719677" visible="true" weight="0.13539445" />
-      <window_info id="Structure" order="1" sideWeight="0.12803234" side_tool="true" visible="true" weight="0.13539445" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.87096775" visible="true" weight="0.13539445" />
+      <window_info id="Structure" order="1" sideWeight="0.12903225" side_tool="true" visible="true" weight="0.13539445" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -601,12 +584,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.19609967" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.19609967" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.38678223" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" weight="0.2611051" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.2611051" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
@@ -1068,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        <state relative-caret-position="418">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11219#11220#0" expanded="true" />
