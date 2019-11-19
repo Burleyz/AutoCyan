@@ -25,6 +25,7 @@ All scripts have built in Anti-Ban and error detection
 - ~~Licencing for Release version~~
 - Automatic updates
 - Stop shortcut needs to be added
+- Error handling and logging
 
 ## Change log
 ### Beta V1.0
@@ -34,6 +35,7 @@ All scripts have built in Anti-Ban and error detection
 - GUI Implemented
 - Licence handling added
 
-## Bugs
-- Issues with licence authentication, needs rework
+## Known Bugs
+- Issues with licence authentication, needs rework (V1.1)
+- Script crashes - bank check randomly fails and thus script exits (V1.1)
 
