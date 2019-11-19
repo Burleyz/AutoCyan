@@ -26,6 +26,7 @@ All scripts have built in Anti-Ban and error detection
 - Automatic updates
 - Stop shortcut needs to be added
 - Error handling and logging
+- Custom scripts and script licencing
 
 ## Change log
 ### Beta V1.0
