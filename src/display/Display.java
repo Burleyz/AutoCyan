@@ -62,13 +62,6 @@ public class Display extends JFrame {
         clientWindow = new Rectangle();
         clientWindow.setFrameFromDiagonal(clientWindowTopLeft, clientWindowBottomRight);
 
-        //System.out.println("InventTopLeft: " + inventoryTopLeft);
-        //System.out.println("InventBottomRight: " + inventoryBottomRight);
-        //System.out.println("ClientTopLeft: " + clientWindowTopLeft);
-        //System.out.println("ClientBottomRight: " + clientWindowBottomRight);
-        //System.out.println("ClientWidth: " + clientWindow.width);
-        //System.out.println("ClientHeight: " + clientWindow.height);
-
         loginScreenCheckRectangle = new Rectangle();
         loginScreenCheckRectangle.setFrameFromDiagonal(new Point(clientWindowTopLeft.x + 300, clientWindowTopLeft.y + 350), new Point(clientWindowBottomRight.x - 300, clientWindowBottomRight.y - 200)); //makes rectangle to check between 3 login screens
 
@@ -112,7 +105,6 @@ public class Display extends JFrame {
             public void paint(Graphics g)
             {
 
-                System.out.println("Painting!");
                 final Font font = getFont().deriveFont(48f);
                 g.setFont(font);
                 g.setColor(Color.RED);
@@ -189,13 +181,6 @@ public class Display extends JFrame {
 
     private void generatePlayScreen() {
         playScreen = new Rectangle(clientWindow.x,clientWindow.y + clientHeaderSize,clientWindow.width,clientWindow.height - clientHeaderSize); //add 40 to move below top bar of bluestacks
-    }
-
-    public Point getMousePos() {
-        PointerInfo inf = MouseInfo.getPointerInfo();
-        Point p = inf.getLocation();
-        System.out.println(p.toString());
-        return p;
     }
 
     public void setClientWindowTopLeft(Point clientWindowTopLeft) {
@@ -279,9 +264,8 @@ public class Display extends JFrame {
         mining = false;
         fletching = false;
         dusting = false;
-        setupGui();
-        repaint();
-        System.out.println("DISPLAY RESET!");
+        //setupGui();
+        //repaint();
     }
 }
 

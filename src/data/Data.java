@@ -28,14 +28,11 @@ public class Data {
         String hash = DatatypeConverter
                 .printHexBinary(md5Digest).toUpperCase();
 
-        //System.out.println(hash);
-
 
         String read = new Scanner(new URL("http://jacgri9.dreamhosters.com/licence/licences").openStream(), "UTF-8").useDelimiter("\\A").next();
         String[] licences = read.split("\\r?\\n");
 
-        for (String a : licences) {
-            //System.out.println(a);
+        for (String a : licences) { ;
             if (a.equals(hash)) {
                 System.out.println("Licence is correct!");
                 ACLicence = licence;
@@ -46,6 +43,8 @@ public class Data {
 
         return false;
     }
+
+
 
     public static void writeLicenceToFile() throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter("./licence.txt", "UTF-8");

@@ -4,11 +4,13 @@ import antiban.AntiBan;
 import character.Character;
 import colour.ColourManager;
 import display.Display;
+import main.Startup;
 import mouse.ClickHandler;
 import objects.RSObject;
 import utils.Time;
 
 import java.awt.*;
+import java.util.logging.Level;
 
 public class ACDuster {
 
@@ -88,7 +90,7 @@ public class ACDuster {
         p2 = p2 / 60;
 
 
-        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " Dust Created: " + dustCounter);
+        Startup.getLogger().info("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " Dust Created: " + dustCounter);
 
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10), display.getClientWindow());
         Time.rest(AntiBan.randomValue(700,1200));
@@ -114,7 +116,7 @@ public class ACDuster {
         } else {
             Time.rest(1000);
             clickHandler.clickPoint(bankExit.x,bankExit.y, display.getClientWindow());
-            System.out.println("ERROR - EXITING");
+            Startup.getLogger().log(Level.SEVERE, "Failed bank check, exiting to prevent bans!");
             logout();
             System.exit(-1);
 

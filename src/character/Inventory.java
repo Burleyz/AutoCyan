@@ -1,21 +1,25 @@
 package character;
 
 import display.Display;
+import main.Startup;
 import mouse.ClickHandler;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Inventory {
 
     private ArrayList<Rectangle> inventSlots;
     private ArrayList<Point> inventSlotPoints;
     private Robot bot;
+    private Logger logger;
 
     public Inventory() {
 
         inventSlots = new ArrayList<>();
         inventSlotPoints = new ArrayList<>();
+        logger = Startup.getLogger();
 
         try {
             bot = new Robot();
@@ -24,21 +28,16 @@ public class Inventory {
         }
     }
 
+
     public void generateInventSlots(Display display) { //disgusting code, need to make this more efficient
         Point inventInnerTopLeft = new Point(display.getInventoryTopLeft()); //gets starting position
 
         Rectangle invent = display.getInventory(); //get rect as invent outline
 
 
-        float width = (float)invent.width;
-        float height = (float)invent.height;
         float boxWidth = (float)invent.width/4;
         float boxHeight = (float)invent.height/7;
 
-        //System.out.println("Invent width: " + width);
-        //System.out.println("Invent height: " + height);
-        //System.out.println("InventSlot width: " + boxWidth);
-        //System.out.println("InventSlot height: " + boxHeight);
 
         int inventSlotCounter = 0;
         int numInventSlots = 28;
@@ -50,104 +49,90 @@ public class Inventory {
             if (inventSlotCounter == 0) { //0
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 4) { //1,2,3
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter == 4) { //4
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + (int) boxHeight, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + (int) boxHeight); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 8) { //5,6,7
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter == 8) {
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + ((int) boxHeight) * 2, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + ((int) boxHeight) * 2); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 12) {
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter == 12) {
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + ((int) boxHeight) * 3, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + ((int) boxHeight) * 3); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 16) {
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter == 16) {
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + ((int) boxHeight) * 4, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + ((int) boxHeight) * 4); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 20) {
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter == 20) {
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + ((int) boxHeight) * 5, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + ((int) boxHeight) * 5); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 24) {
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if(inventSlotCounter == 24) {
                 Rectangle inventSlot = new Rectangle(inventInnerTopLeft.x, inventInnerTopLeft.y + ((int) boxHeight) * 6, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(inventInnerTopLeft.x + (int) boxWidth, inventInnerTopLeft.y + ((int) boxHeight) * 6); //updates new location for next slot
                 inventSlotCounter++;
 
             } else if (inventSlotCounter < 28) {
                 Rectangle inventSlot = new Rectangle(newTopLeft.x, newTopLeft.y, (int) boxWidth, (int) boxHeight);
                 inventSlots.add(inventSlot);
-                //System.out.println("Invent slot: " + inventSlotCounter + ", rectangle created. " + inventSlot.x + " " + inventSlot.y + " " + inventSlot.width + " " + inventSlot.height);
                 newTopLeft = new Point(newTopLeft.x + (int) boxWidth, newTopLeft.y); //updates new location for next slot
                 inventSlotCounter++;
             }
         }
 
-        System.out.println("Inventory positions generated: " + inventSlots.size());
+        logger.info("Inventory positions generated: " + inventSlots.size());
     }
 
     public ArrayList<Rectangle> getInventSlots() {

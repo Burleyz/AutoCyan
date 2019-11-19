@@ -4,11 +4,13 @@ import antiban.AntiBan;
 import character.Character;
 import colour.ColourManager;
 import display.Display;
+import main.Startup;
 import mouse.ClickHandler;
 import objects.RSObject;
 import utils.Time;
 
 import java.awt.*;
+import java.util.logging.Level;
 
 public class ACFletching {
 
@@ -68,7 +70,7 @@ public class ACFletching {
         int p3 = p2 % 60;
         p2 = p2 / 60;
 
-        System.out.println("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " " + making + " Fletched: " + fletchCounter);
+        Startup.getLogger().info("Time elapsed: " +  p2 + ":" + p3 + ":" + p1 + " " + making + " Fletched: " + fletchCounter);
     }
 
 
@@ -133,7 +135,7 @@ public class ACFletching {
 
     private void bank() throws AWTException {
         clickHandler.clickPoint(bankLocation.x + AntiBan.randomValue(1,10), bankLocation.y + AntiBan.randomValue(1,10), display.getClientWindow());
-        Time.rest(AntiBan.randomValue(1000,1950));
+        Time.rest(AntiBan.randomValue(2500,3200));
         checkPosition();
         clickHandler.clickPoint(player.getInventory().getInventSlotPoints().get(1).x + AntiBan.randomValue(1,10),player.getInventory().getInventSlotPoints().get(1).y + AntiBan.randomValue(1,10));
         Time.rest(AntiBan.randomValue(1000,1950));
@@ -160,7 +162,7 @@ public class ACFletching {
         } else {
             Time.rest(1000);
             clickHandler.clickPoint(bankExit.x,bankExit.y, display.getClientWindow());
-            System.out.println("ERROR - EXITING");
+            Startup.getLogger().log(Level.SEVERE, "Failed bank check, exiting to prevent bans!");
             logout();
             System.exit(-1);
 

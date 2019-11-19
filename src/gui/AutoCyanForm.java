@@ -11,8 +11,8 @@ import main.Startup;
 import javax.swing.*;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
-import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,16 +22,16 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     private boolean authenticated;
     private Thread scriptThread;
-    private Startup startup;
     private boolean scriptLive;
+    private Logger logger;
 
     /**
      * Creates new form AutoCyanForm
      */
     public AutoCyanForm() {
         initComponents();
-        startup = new Startup();
         scriptLive = false;
+        logger = Startup.getLogger();
     }
 
     /**
@@ -210,25 +210,18 @@ public class AutoCyanForm extends javax.swing.JFrame {
     private void initThread(int script, int selection) {
         scriptThread = new Thread() {
             public void run() {
-                System.out.println("Thread Running");
+               logger.info("Thread Running");
                 scriptLive = true;
-                startup.loadScript(script, selection);
+                Startup.loadScript(script, selection);
             }
         };
     }
 
     private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        //1 = mining
-        //2 = fletching
-        //3 = dust
-        //4 = herb
-
-
 
         if(scriptLive) {
             scriptThread.resume();
-            System.out.println("Resuming script!");
+            logger.info("Resuming script!");
             statusLabel.setText("Running...");
         } else {
             if (authenticated) {
@@ -267,7 +260,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
                 } else if (herbloreCheckBox.isSelected()) {
                     initThread(4, 0);//selection isnt needed here
                 } else {
-                    System.out.println("Select a script!");
+                    logger.warning("No script selected");
                 }
 
                 scriptThread.start();
@@ -328,21 +321,21 @@ public class AutoCyanForm extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-            if(startup.getData().checkLicence(authenticationField.getText())) {
+            if(Startup.getData().checkLicence(authenticationField.getText())) {
                 authenticated = true;
-                System.out.println("Licence key (" + authenticationField.getText() + ") accepted - Authenticated!");
+                logger.info("Licence key (" + authenticationField.getText() + ") accepted - Authenticated!");
                 authenticatedLabel.setText("Authenticated");
-                startup.setCyanAuthenticated(true);
+                Startup.setCyanAuthenticated(true);
 
             } else {
                 authenticated = false;
-                System.out.println("Licence key (" + authenticationField.getText() + ") is not valid!");
+                logger.warning("Licence key (" + authenticationField.getText() + ") is not valid!");
                 authenticatedLabel.setText("No authentication");
             }
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE,"NoSuchAlgorithmException", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE,"IOException", e);
         }
     }
 
@@ -351,8 +344,8 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
         scriptLive = false;
         scriptThread.stop();
-        startup.getDisplay().resetDisplay();
-        System.out.println("Script stopped and Display reset!");
+        Startup.getDisplay().resetDisplay();
+        logger.info("Script stopped.");
         statusLabel.setText("Sleeping...");
         scriptThread = null;
 
@@ -362,6 +355,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         scriptThread.suspend();
+        logger.info("Script paused.");
         statusLabel.setText("Paused.");
     }
 

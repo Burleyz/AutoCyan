@@ -4,11 +4,13 @@ import antiban.AntiBan;
 import character.Character;
 import colour.ColourManager;
 import display.Display;
+import main.Startup;
 import mouse.ClickHandler;
 import objects.RSObject;
 import utils.Time;
 
 import java.awt.*;
+import java.util.logging.Level;
 
 public class ACHerblore {
 
@@ -88,15 +90,13 @@ public class ACHerblore {
 
     private void checkPosition() throws AWTException {
 
-        System.out.println("Location Colour: " + colourManager.getColour(checkBankPoint, display.getClientWindow()));
-        System.out.println("BANK Colour: " + bank.getColors()[0]);
 
         if(colourManager.similarColours(colourManager.getColour(checkBankPoint, display.getClientWindow()), bank.getColors()[0],20)) {
 
         } else {
             Time.rest(1000);
             clickHandler.clickPoint(bankExit.x,bankExit.y, display.getClientWindow());
-            System.out.println("ERROR - EXITING");
+            Startup.getLogger().log(Level.SEVERE, "Failed bank check, exiting to prevent bans!");
             logout();
             System.exit(-1);
 

@@ -20,6 +20,10 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Startup {
 
@@ -38,6 +42,8 @@ public class Startup {
     private static ACDuster acDuster;
     private static ACHerblore acHerblore;
     private static Data data;
+    private static Logger logger;
+    private static FileHandler fileHandler;
 
     /*
     Please note! When starting client, please select a free world manually if using a f2p account!
@@ -48,6 +54,15 @@ public class Startup {
         loginPropertiesLoader = new LoginPropertiesLoader();
         clickHandler = new ClickHandler();
         data = new Data();
+
+    }
+
+    private static void initLogging() throws IOException {
+        logger = Logger.getLogger("AutoCyanLog");
+        fileHandler = new FileHandler("./autocyan.log");
+        logger.addHandler(fileHandler);
+        SimpleFormatter formatter = new SimpleFormatter();
+        fileHandler.setFormatter(formatter);
     }
 
     private static void checkIfLicenceExists() throws IOException {
@@ -57,10 +72,7 @@ public class Startup {
         BufferedReader br = new BufferedReader(fr);
         String line;
         while((line = br.readLine()) != null){
-            //process the line
-            //System.out.println(line);
             gui.getAuthenticationField().setText(line);
-
         }
 
         fr.close();
@@ -70,6 +82,13 @@ public class Startup {
 
     public static void main(String[] args) {
 
+        try {
+            initLogging();
+            logger.info("Logging initiated successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         //launches gui
         cyanAuthenticated = false;
 
@@ -77,22 +96,27 @@ public class Startup {
         gui.setVersionLabel(Data.getVERSION());
         gui.setVisible(true);
 
+
+        //check licence file exists
         try {
             checkIfLicenceExists();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         while(!cyanAuthenticated) {
             Time.rest(1000);
         }
 
 
-        System.out.println("Starting AutoCyan - Version: " + Data.getVERSION());
-        System.out.println("Getting OSRS instance...");
+        logger.info("Starting AutoCyan - Version: " + Data.getVERSION());
+        logger.info("Getting OSRS instance...");
         initClasses();
+
+
+
         getOSRSWindow();
         grabClient();
-
 
 
         Time.rest(2000);
@@ -105,13 +129,11 @@ public class Startup {
         }
         Time.rest(2000);
 
-        //scriptSelector();
 
     }
 
     private static void getOSRSWindow() {
         int[] rect;
-
 
         try {
             rect = GetWindowRect.getRect(loginPropertiesLoader.getClientName());
@@ -121,77 +143,39 @@ public class Startup {
             clientRectangleBottomX = rect[2];
             clientRectangleBottomY = rect[3];
 
-
-            System.out.printf("The corner locations for the window \"%s\" are %s",
-                    loginPropertiesLoader.getClientName(), Arrays.toString(rect));
-
-            System.out.println("\n");
+            logger.log(Level.INFO,"The corner locations for the window " + loginPropertiesLoader.getClientName() + " are " + Arrays.toString(rect));
 
         } catch (GetWindowRect.WindowNotFoundException e) {
-            e.printStackTrace();
-            System.out.println("Instance not found! Please start Old School RuneScape Client!");
-            System.out.println("Client aborting...");
+            logger.log(Level.SEVERE, "Instance not found! Please start Old School RuneScape Client!", e);
+            logger.severe("Client aborting...");
             System.exit(-1);
 
         } catch (GetWindowRect.GetWindowRectException e) {
-            e.printStackTrace();
-            System.out.println("Client aborting...");
+            logger.log(Level.SEVERE, "Client aborting...", e);
             System.exit(-1);
         }
     }
 
-    private static void scriptSelector() {
-        scanner = new Scanner(System.in);
-        System.out.println("\n");
-        System.out.println("Which script would you like to run?");
-        System.out.println("1: ACMining (PowerMining)");
-        System.out.println("2: ACFletching");
-        System.out.println("3: ACDuster");
-        System.out.println("4: ACHerblore");
-        int answer = scanner.nextInt();
-        Time.rest(1000);
-        //loadScript(answer);
-
-
-    }
 
     public static void loadScript(int script, int selection) {
         switch (script) {
             case 1:
-                System.out.println("Loading ACMining...");
-                /*
-                scanner = new Scanner(System.in);
-                System.out.println("\n");
-                System.out.println("Where are you mining?");
-                System.out.println("1: Varrock East");
-                System.out.println("2: Mining Guild");
-                int answer = scanner.nextInt();
-                */
+                logger.log(Level.INFO, "Loaded script: ACMining");
                 acMining = new ACMining(display, selection); //passes display to have access to the playscreen data
                 break;
 
             case 2:
-                System.out.println("Loading ACFletching...");
-                /*
-                scanner = new Scanner(System.in);
-                System.out.println("\n");
-                System.out.println("What are you fletching?");
-                System.out.println("1: Shortbows");
-                System.out.println("2: Longbows");
-                System.out.println("3: Adding Bolt Tips");
-                System.out.println("4: Making Bolts");
-                int fletchingType = scanner.nextInt();
-                */
+                logger.log(Level.INFO, "Loaded script: ACFletching");
                 acFletching = new ACFletching(display, selection);
                 break;
 
             case 3:
-                System.out.println("Loading ACDuster...");
+                logger.log(Level.INFO, "Loaded script: ACDuster");
                 acDuster = new ACDuster(display);
                 break;
 
             case 4:
-                System.out.println("Loading ACDuster...");
+                logger.log(Level.INFO, "Loaded script: ACHerblore");
                 acHerblore = new ACHerblore(display);
                 break;
         }
@@ -200,7 +184,7 @@ public class Startup {
 
 
     private static void grabClient() {
-        System.out.println("Latching onto instance!");
+        logger.info("Latching onto instance...");
         display = new Display(loginPropertiesLoader);
         display.setClientWindowTopLeft(new Point(clientRectangleTopX, clientRectangleTopY));
         display.setClientWindowBottomRight(new Point(clientRectangleBottomX, clientRectangleBottomY));
@@ -210,7 +194,9 @@ public class Startup {
     private static void login(String clientType) throws AWTException, IOException {
 
         boolean tf = true;
-        System.out.println("Attempting to login...");
+
+        logger.info("Attempting to login...");
+
         if (clientType.equals("desktop")) {
 
             KeyboardKeys kk = new KeyboardKeys();
@@ -224,7 +210,6 @@ public class Startup {
             String username = loginPropertiesLoader.getUsername();
             String password = loginPropertiesLoader.getPassword();
 
-
             while(tf) {
 
                 if (checkLoginScreen(1)) {
@@ -233,7 +218,7 @@ public class Startup {
 
                 } else if (checkLoginScreen(2)) { //checking which login screen, if on correct screen (screen 2) then do type chars
 
-                    System.out.println("Typing username and password...");
+                    logger.info("Typing username and password...");
                     for (char c : username.toCharArray()) {
                         kk.keyPress(c);
                         robot.delay(100);
@@ -256,13 +241,12 @@ public class Startup {
                     clickHandler.clickPoint(393, 380, display.getClientWindow());
 
                 } else if (checkLoginScreen(4)) {
-                    System.out.println("Credentials are incorrect in autocyan.properties!");
+                    logger.info("Credentials are incorrect in autocyan.properties!");
                     System.exit(-1);
 
-
                 } else {
-                    System.out.println("Account is logged in.");
-                    System.out.println("Login completed!\n");
+                    logger.info("Account is logged in.");
+                    logger.info("Login completed!\n");
                     tf=false;
                 }
             }
@@ -270,17 +254,7 @@ public class Startup {
 
         } else if (clientType.equals("mobile")) {
 
-            System.out.println("Mobile client - Please run script when already logged in!");
-            /*
-            NOT WORKING, CLICK WONT REGISTER - Login manually
-
-            Point p = clickHandler.getCenter(display.getClientWindow());
-            clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
-            Time.rest(2000);
-            clickHandler.clickPoint(p.x,p.y + 50); //add 50 to move the point slight down as center of client isnt the center of the game
-            System.out.println("Login completed!\n");
-            */
-
+            logger.warning("Mobile client - Please run script when already logged in!");
         }
     }
 
@@ -373,5 +347,9 @@ public class Startup {
 
     public static Data getData() {
         return data;
+    }
+
+    public static Logger getLogger() {
+        return logger;
     }
 }

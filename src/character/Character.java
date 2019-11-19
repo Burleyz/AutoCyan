@@ -1,6 +1,7 @@
 package character;
 
 import display.Display;
+import main.Startup;
 
 public class Character {
 
@@ -12,6 +13,7 @@ public class Character {
         inventory = new Inventory();
         inventory.generateInventSlots(display);
         inventory.generateInventSlotPoints();
+        Startup.getLogger().info("Character initiated successfully");
 
     }
 
