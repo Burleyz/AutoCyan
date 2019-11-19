@@ -38,4 +38,4 @@ All scripts have built in Anti-Ban and error detection
 ## Known Bugs
 - Issues with licence authentication, needs rework (V1.1)
 - Script crashes - bank check randomly fails and thus script exits (V1.1)
-
+- Obfuscator adds expiry date to code (V1.0/V1.1) 
