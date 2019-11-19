@@ -24,6 +24,9 @@ All scripts have built in Anti-Ban and error detection
 - ~~GUI with pause, stop and start support~~
 - ~~Licencing for Release version~~
 - Automatic updates
+- Stop shortcut needs to be added
+- Error handling and logging
+- Custom scripts and script licencing
 
 ## Change log
 ### Beta V1.0
@@ -32,3 +35,8 @@ All scripts have built in Anti-Ban and error detection
 - Fletching script can now add feathers to bolts
 - GUI Implemented
 - Licence handling added
+
+## Known Bugs
+- Issues with licence authentication, needs rework (V1.1)
+- Script crashes - bank check randomly fails and thus script exits (V1.1)
+- Obfuscator adds expiry date to code (V1.0/V1.1) 
