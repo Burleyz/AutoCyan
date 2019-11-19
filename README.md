@@ -25,7 +25,7 @@ All scripts have built in Anti-Ban and error detection
 - ~~Licencing for Release version~~
 - Automatic updates
 - Stop shortcut needs to be added
-- Error handling and logging
+- ~~Error handling and logging~~
 - Custom scripts and script licencing
 
 ## Change log
@@ -37,6 +37,6 @@ All scripts have built in Anti-Ban and error detection
 - Licence handling added
 
 ## Known Bugs
-- Issues with licence authentication, needs rework (V1.1)
-- Script crashes - bank check randomly fails and thus script exits (V1.1)
-- Obfuscator adds expiry date to code (V1.0/V1.1) 
+- ~~Issues with licence authentication, needs rework (V1.1)~~ DNS propogation was causing these issues, now resolved.
+- ~~Script crashes - bank check randomly fails and thus script exits (V1.1)~~ This has been patched and was due to bad ping, needs adjustment dependant on world ping but delay on checking bank has been increased to 2.5-3.2 seconds.
+- ~~Obfuscator adds expiry date to code (V1.0/V1.1)~~ Changed obfuscator.
