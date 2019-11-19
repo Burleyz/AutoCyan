@@ -33,8 +33,9 @@ All scripts have built in Anti-Ban and error detection
  - Initial Release
 ### Beta V1.1
 - Fletching script can now add feathers to bolts
-- GUI Implemented
-- Licence handling added
+- GUI
+- Licence handling
+- Logging
 
 ## Known Bugs
 - ~~Issues with licence authentication, needs rework (V1.1)~~ DNS propogation was causing these issues, now resolved.
