@@ -19,7 +19,7 @@ All scripts have built in Anti-Ban and error detection
 
 ## Discord 
 ![DiscordBadge](https://img.shields.io/discord/637424645494276113)
-https://discord.gg/yJyKwrN
+- https://discord.gg/yJyKwrN
 
 ## Change log
 ### Beta V1.0
