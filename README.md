@@ -2,6 +2,7 @@
 _**Complete RuneScape Mobile Botting Solution**_
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jacktgriffiths/autocyan/badge/master?s=ca1e5eec458d285126b76d64e540122f8d23c3ef)](https://www.codefactor.io/repository/github/jacktgriffiths/autocyan/overview/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fdfbc714ad5b4dc8817a9445bc2356d5)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacktgriffiths/AutoCyan&amp;utm_campaign=Badge_Grade)
 
 
 ## Version
