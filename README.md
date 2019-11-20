@@ -1,6 +1,7 @@
 # ![AutoCyanLogo](/images/logo.PNG)
 _**Complete RuneScape Mobile Botting Solution**_
 
+[![CodeFactor](https://www.codefactor.io/repository/github/jacktgriffiths/autocyan/badge/master?s=ca1e5eec458d285126b76d64e540122f8d23c3ef)](https://www.codefactor.io/repository/github/jacktgriffiths/autocyan/overview/master)
 
 
 ## Version
