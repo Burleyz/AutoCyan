@@ -1,0 +1,16 @@
+Nov 20, 2019 10:13:54 PM main.Startup main
+INFO: Logging initiated successfully
+Nov 20, 2019 10:13:57 PM gui.AutoCyanForm c
+INFO: Licence key (u3X9iDadU7HCU52) accepted - Authenticated!
+Nov 20, 2019 10:13:58 PM main.Startup main
+INFO: Starting AutoCyan - Version: Beta: 1.1
+Nov 20, 2019 10:13:58 PM main.Startup main
+INFO: Getting OSRS instance...
+Nov 20, 2019 10:13:59 PM main.Startup main
+SEVERE: Instance not found! Please start Old School RuneScape Client!
+utils.GetWindowRect$WindowNotFoundException: Window null for className: ; windowName: NoxPlayer1
+	at utils.GetWindowRect.getRect(Unknown Source)
+	at main.Startup.main(Unknown Source)
+
+Nov 20, 2019 10:13:59 PM main.Startup main
+SEVERE: Client aborting...

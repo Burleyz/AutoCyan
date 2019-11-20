@@ -80,6 +80,10 @@ public class Startup {
 
     }
 
+    private static void versionChecker() {
+        Data.checkVersion();
+    }
+
     public static void main(String[] args) {
 
         try {
@@ -88,6 +92,8 @@ public class Startup {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        versionChecker();
 
         //launches gui
         cyanAuthenticated = false;
