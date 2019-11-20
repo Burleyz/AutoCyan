@@ -18,7 +18,7 @@ _**Complete RuneScape Mobile Botting Solution**_
 All scripts have built in Anti-Ban and error detection
 
 ## Discord 
-- https://discord.gg/rDntamv
+![DiscordBadge](https://img.shields.io/discord/637424645494276113)
 
 ## Change log
 ### Beta V1.0
