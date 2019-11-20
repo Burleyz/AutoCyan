@@ -6,8 +6,7 @@ _**Complete RuneScape Mobile Botting Solution**_
 
 
 ## Version
-- **Release:** Beta: V1.0
-- **Development:** Beta V1.1
+![DevelopmentVersion](https://img.shields.io/badge/version-beta--1.1-brightgreen)
 
 ## Scripts
 - ACMining: Iron powermining scrip that supports Varrock East and the Mining Guild
