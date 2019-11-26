@@ -28,3 +28,6 @@ All scripts have built in Anti-Ban and error detection
 - GUI
 - Licence handling
 - Logging
+
+### Beta V1.2
+- Live updates via MySql table
