@@ -4,7 +4,6 @@ import main.Startup;
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -14,7 +13,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 
 public class Data {
-    private final static String VERSION = "beta_1.1";
+    private final static String VERSION = "beta_1.2";
     private static String ACLicence = "";
 
     public Data() {
@@ -66,7 +65,7 @@ public class Data {
                 .printHexBinary(md5Digest).toUpperCase();
 
 
-        String read = new Scanner(new URL("http://jacgri9.dreamhosters.com/licence/licences").openStream(), "UTF-8").useDelimiter("\\A").next();
+        String read = new Scanner(new URL("http://jacgri9.dreamhosters.com/ac/licence/licences").openStream(), "UTF-8").useDelimiter("\\A").next();
         String[] licences = read.split("\\r?\\n");
 
         for (String a : licences) { ;

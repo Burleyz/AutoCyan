@@ -1,5 +1,6 @@
 package main;
 
+import data.DBManager;
 import gui.AutoCyanForm;
 import data.Data;
 import display.Display;
@@ -44,6 +45,8 @@ public class Startup {
     private static Data data;
     private static Logger logger;
     private static FileHandler fileHandler;
+    private static DBManager dbManager;
+    private static long startTime;
 
     /*
     Please note! When starting client, please select a free world manually if using a f2p account!
@@ -54,6 +57,7 @@ public class Startup {
         loginPropertiesLoader = new LoginPropertiesLoader();
         clickHandler = new ClickHandler();
         data = new Data();
+        dbManager = new DBManager();
 
     }
 
@@ -86,6 +90,9 @@ public class Startup {
 
     public static void main(String[] args) {
 
+        startTime = System.nanoTime();
+
+
         try {
             initLogging();
             logger.info("Logging initiated successfully");
@@ -94,6 +101,7 @@ public class Startup {
         }
 
         versionChecker();
+
 
         //launches gui
         cyanAuthenticated = false;
@@ -120,7 +128,6 @@ public class Startup {
         initClasses();
 
 
-
         getOSRSWindow();
         grabClient();
 
@@ -135,6 +142,17 @@ public class Startup {
         }
         Time.rest(2000);
 
+        Thread updateMysqlThread = new Thread() {
+            public void run() {
+                logger.info("Table update thread running.");
+                while(true) {
+                    updateTableInfo();
+                    Time.rest(10000);
+                }
+            }
+        };
+
+        updateMysqlThread.run();
 
     }
 
@@ -326,6 +344,19 @@ public class Startup {
         return true;
     }
 
+    public static long calcRunTime() {
+        long currentTime = System.nanoTime();
+        return currentTime - startTime;
+    }
+
+    public static void updateRuntimeInTable() {
+        dbManager.updateTime(gui.getAuthenticationField().getText(),Long.toString(calcRunTime()));
+    }
+
+    public static void updateTableInfo() {
+        dbManager.updateStatus(gui.getAuthenticationField().getText(),Long.toString(calcRunTime()),gui.getScriptRunning(),"TRUE");
+    }
+
 
     public static Display getDisplay() {
         return display;
@@ -357,5 +388,9 @@ public class Startup {
 
     public static Logger getLogger() {
         return logger;
+    }
+
+    public static long getStartTime() {
+        return startTime;
     }
 }

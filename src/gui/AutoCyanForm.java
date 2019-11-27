@@ -24,6 +24,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
     private Thread scriptThread;
     private boolean scriptLive;
     private Logger logger;
+    private String scriptRunning;
 
     /**
      * Creates new form AutoCyanForm
@@ -31,6 +32,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
     public AutoCyanForm() {
         initComponents();
         scriptLive = false;
+        scriptRunning = "none";
         logger = Startup.getLogger();
     }
 
@@ -219,6 +221,8 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
+        Startup.updateRuntimeInTable();
+
         if(scriptLive) {
             scriptThread.resume();
             logger.info("Resuming script!");
@@ -230,10 +234,12 @@ public class AutoCyanForm extends javax.swing.JFrame {
                     switch (scriptComboBox.getSelectedIndex()) {
                         case 0:
                             initThread(1, 1);
+                            scriptRunning = "mining_varrock";
                             break;
 
                         case 1:
                             initThread(1, 2);
+                            scriptRunning = "mining_guild";
                             break;
                     }
 
@@ -241,24 +247,30 @@ public class AutoCyanForm extends javax.swing.JFrame {
                     switch (scriptComboBox.getSelectedIndex()) {
                         case 0:
                             initThread(2, 1);
+                            scriptRunning = "fletching_shortbows";
                             break;
 
                         case 1:
                             initThread(2, 2);
+                            scriptRunning = "fletching_longbows";
                             break;
 
                         case 2:
                             initThread(2, 3);
+                            scriptRunning = "fletching_bolt_tips";
                             break;
 
                         case 3:
                             initThread(2, 4);
+                            scriptRunning = "fletching_bolts_unf";
                             break;
                     }
                 } else if (dustCheckBox.isSelected()) {
                     initThread(3, 0); //selection isnt needed here
+                    scriptRunning = "dusting";
                 } else if (herbloreCheckBox.isSelected()) {
                     initThread(4, 0);//selection isnt needed here
+                    scriptRunning = "herblore";
                 } else {
                     logger.warning("No script selected");
                 }
@@ -342,9 +354,10 @@ public class AutoCyanForm extends javax.swing.JFrame {
     private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
+        scriptRunning = "none";
         scriptLive = false;
         scriptThread.stop();
-        Startup.getDisplay().resetDisplay();
+        Startup.getDisplay().resetDisplay(); //doesn't work
         logger.info("Script stopped.");
         statusLabel.setText("Sleeping...");
         scriptThread = null;
@@ -419,5 +432,9 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     public JTextField getAuthenticationField() {
         return authenticationField;
+    }
+
+    public String getScriptRunning() {
+        return scriptRunning;
     }
 }
