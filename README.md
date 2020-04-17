@@ -30,4 +30,4 @@ All scripts have built in Anti-Ban and error detection
 - Logging
 
 ### Beta V1.2
-- Live updates via MySql table
+- Live updates via MySql table *Removed temporarily*
