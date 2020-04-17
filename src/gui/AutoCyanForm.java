@@ -221,7 +221,7 @@ public class AutoCyanForm extends javax.swing.JFrame {
 
     private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
-        Startup.updateRuntimeInTable();
+        //Startup.updateRuntimeInTable();
 
         if(scriptLive) {
             scriptThread.resume();

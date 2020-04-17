@@ -210,9 +210,6 @@ public class Display extends JFrame {
         return clientWindow;
     }
 
-    //public Rectangle generateInventoryRectangle() {
-    //    clientWindow.
-    //}
 
 
     public Rectangle getPlayScreen() {
@@ -224,12 +221,24 @@ public class Display extends JFrame {
             clientHeaderSize = 32;
         } else if(loginPropertiesLoader.getClientName().equals("NoxPlayer1")) {
             clientHeaderSize = 34;
+        } else {
+            clientHeaderSize = 32; //for rsps
         }
     }
 
-    private void setUpInventory() {
-        inventoryTopLeft = new Point(clientWindowTopLeft.x + 696, clientWindowTopLeft.y + 254);
-        inventoryBottomRight = new Point(clientWindowTopLeft.x + 901, clientWindowTopLeft.y + 536);
+    private void setUpInventory() { //add different rsps clients here (this will work for all normal osrs sized clients, runex/spk/osbuddy etc set in fixed mode
+
+        if(loginPropertiesLoader.getClientType().equals("mobile")) {
+            inventoryTopLeft = new Point(clientWindowTopLeft.x + 696, clientWindowTopLeft.y + 254);
+            inventoryBottomRight = new Point(clientWindowTopLeft.x + 901, clientWindowTopLeft.y + 536);
+
+        } else if (loginPropertiesLoader.getClientType().equals("desktop_rsps")) {
+            inventoryTopLeft = new Point(clientWindowTopLeft.x + 553, clientWindowTopLeft.y + 232);
+            inventoryBottomRight = new Point(clientWindowTopLeft.x + 740, clientWindowTopLeft.y + 492);
+        } else if (loginPropertiesLoader.getClientType().equals("desktop")) {
+            inventoryTopLeft = new Point(clientWindowTopLeft.x + 553, clientWindowTopLeft.y + 232);
+            inventoryBottomRight = new Point(clientWindowTopLeft.x + 740, clientWindowTopLeft.y + 492);
+        }
     }
 
     public Point getInventoryTopLeft() {

@@ -34,9 +34,6 @@ public class ACMining {
     private static Point mgRockBLocation;
     private static Point mgRockCLocation;
 
-    private int mineDelay;
-
-
     private int errorCounter;
     private static String miningLocation;
 
@@ -53,7 +50,6 @@ public class ACMining {
         oreLocations = new ArrayList<>();
         inits();
         errorCounter = 0;
-        mineDelay = 1500;
 
         if(location == 1) {
             miningLocation = "varrock_east";
@@ -64,6 +60,7 @@ public class ACMining {
         display.setMining(true);
         display.setMiningLocation(miningLocation);
         display.setupGui();
+
 
 
         while (running) {
@@ -85,43 +82,49 @@ public class ACMining {
             checkInventFull();
 
             if(miningLocation == "varrock_east") {
-                if (checkRockState(rockALocation,ironRock) == 1) { //if rockA alive
-                    Startup.getLogger().info("Mining rock A... \n");
-                    mineRock(rockALocation);
-                    errorCounter = 0; //reset error counter because if successfully mining, acc must be in correct location.
-                } else if (checkRockState(rockALocation,ironRock) == 0) {
 
-                    if (checkRockState(rockBLocation,ironRock) == 1) {
-                        Startup.getLogger().info("Mining rock B...");
-                        mineRock(rockBLocation);
-                        errorCounter = 0;
-                    } else if (checkRockState(rockBLocation,ironRock) == 0) {
-                        Startup.getLogger().info("Both rocks are down... waiting...");
-                        errorCounter = 0;
-                    }
-                }
-            } else if (miningLocation == "mining_guild") {
-                if (checkRockState(mgRockALocation,ironRock) == 1) { //if rockA alive
-                    Startup.getLogger().info("Mining rock A... \n");
-                    mineRock(mgRockALocation);
-                    errorCounter = 0; //reset error counter because if successfully mining, acc must be in correct location.
-                } else if (checkRockState(mgRockALocation,ironRock) == 0) {
-                    if (checkRockState(mgRockBLocation,ironRock) == 1) {
-                        Startup.getLogger().info("Mining rock B...");
-                        mineRock(mgRockBLocation);
-                        errorCounter = 0;
-                    } else if (checkRockState(mgRockBLocation,ironRock) == 0) {
-                        if (checkRockState(mgRockCLocation,ironRock) == 1) {
-                            Startup.getLogger().info("Mining rock C...");
-                            mineRock(mgRockCLocation);
+                    if (checkRockState(rockALocation,ironRock) == 1) { //if rockA alive
+                        Startup.getLogger().info("Mining rock A... \n");
+                        mineRock(rockALocation,ironRock);
+
+                        errorCounter = 0; //reset error counter because if successfully mining, acc must be in correct location.
+
+                    } else if (checkRockState(rockALocation,ironRock) == 0) {
+
+                        if (checkRockState(rockBLocation,ironRock) == 1) {
+                            Startup.getLogger().info("Mining rock B...");
+                            mineRock(rockBLocation,ironRock);
                             errorCounter = 0;
-                        } else if (checkRockState(mgRockCLocation,ironRock) == 0) {
-                            Startup.getLogger().info("All rocks are down... waiting...");
+
+                        } else if (checkRockState(rockBLocation,ironRock) == 0) {
+                            Startup.getLogger().info("Both rocks are down... waiting...");
                             errorCounter = 0;
                         }
                     }
+                } else if (miningLocation == "mining_guild") {
+                    if (checkRockState(mgRockALocation,ironRock) == 1) { //if rockA alive
+                        Startup.getLogger().info("Mining rock A... \n");
+                        mineRock(mgRockALocation,ironRock);
+                        errorCounter = 0; //reset error counter because if successfully mining, acc must be in correct location.
+                    } else if (checkRockState(mgRockALocation,ironRock) == 0) {
+                        if (checkRockState(mgRockBLocation,ironRock) == 1) {
+                            Startup.getLogger().info("Mining rock B...");
+                            mineRock(mgRockBLocation,ironRock);
+                            errorCounter = 0;
+                        } else if (checkRockState(mgRockBLocation,ironRock) == 0) {
+                            if (checkRockState(mgRockCLocation,ironRock) == 1) {
+                                Startup.getLogger().info("Mining rock C...");
+                                mineRock(mgRockCLocation,ironRock);
+                                errorCounter = 0;
+                            } else if (checkRockState(mgRockCLocation,ironRock) == 0) {
+                                Startup.getLogger().info("All rocks are down... waiting...");
+                                errorCounter = 0;
+                            }
+                        }
+                    }
                 }
-            }
+
+
 
         }
     }
@@ -174,13 +177,22 @@ public class ACMining {
         Time.rest(1000);
     }
 
-    private void mineRock(Point point) {
+    private void mineRock(Point point, RSObject rock) {
         try {
             clickHandler.clickPoint(point.x + AntiBan.randomValue(1,5),point.y + AntiBan.randomValue(1,5), display.getClientWindow());
         } catch (AWTException e) {
             e.printStackTrace();
         }
-        Time.rest(mineDelay + AntiBan.randomValue(1,600));
+
+        //loops if rock is live
+
+        while(checkRockState(point,rock) == 1) {
+            System.out.println("mining...");
+            Time.rest(500);
+
+        }
+
+        System.out.println("Rock successfully mined!");
     }
 
     private void checkInventFull() {

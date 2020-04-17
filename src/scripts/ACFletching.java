@@ -28,12 +28,12 @@ public class ACFletching {
     private static final int TIME_TO_COMPLETE_INVENT_BOWS = 50000; //will change this to use checks, but for inital, 50 secongs = 50000 ms
     private static final int TIME_TO_COMPLETE_BOLTS = 14400;
     private static RSObject bank;
-    private int fletchingType; //1 for shortbows, 2 for longbows
+
     private long startTime;
     private int fletchCounter;
     private boolean running; //added to enable use of stop button
 
-    public ACFletching(Display display, int fletchingType) {
+    public ACFletching(Display display, int fletchingType) { //1 for shortbows, 2 for longbows
         this.display = display;
         clickHandler = new ClickHandler();
         colourManager = new ColourManager(display);

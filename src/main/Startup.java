@@ -28,7 +28,7 @@ import java.util.logging.SimpleFormatter;
 
 public class Startup {
 
-    private static Scanner scanner;
+    //private static Scanner scanner;
     private static Display display;
     private static int clientRectangleTopX;
     private static int clientRectangleTopY;
@@ -57,7 +57,7 @@ public class Startup {
         loginPropertiesLoader = new LoginPropertiesLoader();
         clickHandler = new ClickHandler();
         data = new Data();
-        dbManager = new DBManager();
+        //dbManager = new DBManager();
 
     }
 
@@ -124,11 +124,11 @@ public class Startup {
 
 
         logger.info("Starting AutoCyan - Version: " + Data.getVERSION());
-        logger.info("Getting OSRS instance...");
+        logger.info("Getting client instance...");
         initClasses();
 
 
-        getOSRSWindow();
+        getClientWindow();
         grabClient();
 
 
@@ -142,6 +142,7 @@ public class Startup {
         }
         Time.rest(2000);
 
+        /* MYSQL Code to update database, add back in when we have a DB setup
         Thread updateMysqlThread = new Thread() {
             public void run() {
                 logger.info("Table update thread running.");
@@ -153,10 +154,11 @@ public class Startup {
         };
 
         updateMysqlThread.run();
+        */
 
     }
 
-    private static void getOSRSWindow() {
+    private static void getClientWindow() {
         int[] rect;
 
         try {
@@ -221,7 +223,7 @@ public class Startup {
 
         logger.info("Attempting to login...");
 
-        if (clientType.equals("desktop")) {
+        if (clientType.equals("desktop_osrs")) {
 
             KeyboardKeys kk = new KeyboardKeys();
 
@@ -279,6 +281,10 @@ public class Startup {
         } else if (clientType.equals("mobile")) {
 
             logger.warning("Mobile client - Please run script when already logged in!");
+
+        } else if (clientType.equals("desktop_rsps")) {
+
+            logger.warning("RSPS Client, currently no log in facilities are available (COMING SOON)");
         }
     }
 
